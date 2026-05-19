@@ -1,0 +1,47 @@
+基因频率分析报告
+==================================================
+
+分析时间: 2025-09-09 20:20:28
+数据文件: /home/rhyswei/Code/YeastDataProcess/gene_top20_acc_intersection/all_predictions.csv
+每个样本选择的基因数: 30
+总样本数: 414
+唯一基因数: 3842
+
+基因频率分布:
+------------------------------
+出现 13 次: 1 个基因
+出现 12 次: 1 个基因
+出现 11 次: 2 个基因
+出现 10 次: 6 个基因
+出现 9 次: 20 个基因
+出现 8 次: 35 个基因
+出现 7 次: 109 个基因
+出现 6 次: 240 个基因
+出现 5 次: 411 个基因
+出现 4 次: 614 个基因
+出现 3 次: 930 个基因
+出现 2 次: 876 个基因
+出现 1 次: 597 个基因
+
+前20个最频繁出现的基因:
+------------------------------
+ 1. gene_chrII_ATAC1_peak_106_chrII_135314_136549 (出现 13 次, 3.1%)
+ 2. gene_chrIV_ATAC1_peak_965_chrIV_1459271_1460417 (出现 12 次, 2.9%)
+ 3. gene_chrXVI_ATAC1_peak_3886_chrXVI_492835_493455 (出现 11 次, 2.7%)
+ 4. gene_chrIV_ATAC1_peak_679_chrIV_584634_584898 (出现 11 次, 2.7%)
+ 5. gene_chrVI_ATAC1_peak_1372_chrVI_69294_69877 (出现 10 次, 2.4%)
+ 6. gene_chrXVI_ATAC1_peak_3794_chrXVI_207289_208125 (出现 10 次, 2.4%)
+ 7. gene_chrVIII_ATAC1_peak_1901_chrVIII_314566_314894 (出现 10 次, 2.4%)
+ 8. gene_chrIV_ATAC1_peak_567_chrIV_276563_276776 (出现 10 次, 2.4%)
+ 9. gene_chrIV_ATAC1_peak_489_chrIV_66958_67408 (出现 10 次, 2.4%)
+10. gene_chrXVI_ATAC1_peak_3893_chrXVI_506145_506770 (出现 10 次, 2.4%)
+11. gene_chrX_ATAC1_peak_2143_chrX_472190_472433 (出现 9 次, 2.2%)
+12. gene_chrXII_ATAC1_peak_2599_chrXII_406811_407373 (出现 9 次, 2.2%)
+13. gene_chrXIV_ATAC1_peak_3332_chrXIV_676431_676661 (出现 9 次, 2.2%)
+14. gene_chrXII_ATAC1_peak_2476_chrXII_81131_82245 (出现 9 次, 2.2%)
+15. gene_chrXII_ATAC1_peak_2488_chrXII_104965_105214 (出现 9 次, 2.2%)
+16. gene_chrII_ATAC1_peak_112_chrII_151120_151500 (出现 9 次, 2.2%)
+17. gene_chrXV_ATAC1_peak_3376_chrXV_34175_34395 (出现 9 次, 2.2%)
+18. gene_chrIV_ATAC1_peak_641_chrIV_481936_482142 (出现 9 次, 2.2%)
+19. gene_chrII_ATAC1_peak_191_chrII_381014_381856 (出现 9 次, 2.2%)
+20. gene_chrVII_ATAC1_peak_1470_chrVII_93334_93872 (出现 9 次, 2.2%)

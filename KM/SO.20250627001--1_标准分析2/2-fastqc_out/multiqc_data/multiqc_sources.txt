@@ -1,0 +1,13 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	C-1_R2_val_2	/home/project5/sfzhang_2024/project/SO.20250627001--1-ATAC-yeast/NEW/2-fastqc_out/C-1_R2_val_2_fastqc.zip
+FastQC	all_sections	O-3_R2_val_2	/home/project5/sfzhang_2024/project/SO.20250627001--1-ATAC-yeast/NEW/2-fastqc_out/O-3_R2_val_2_fastqc.zip
+FastQC	all_sections	O-2_R2_val_2	/home/project5/sfzhang_2024/project/SO.20250627001--1-ATAC-yeast/NEW/2-fastqc_out/O-2_R2_val_2_fastqc.zip
+FastQC	all_sections	C-1_R1_val_1	/home/project5/sfzhang_2024/project/SO.20250627001--1-ATAC-yeast/NEW/2-fastqc_out/C-1_R1_val_1_fastqc.zip
+FastQC	all_sections	O-1_R1_val_1	/home/project5/sfzhang_2024/project/SO.20250627001--1-ATAC-yeast/NEW/2-fastqc_out/O-1_R1_val_1_fastqc.zip
+FastQC	all_sections	C-2_R1_val_1	/home/project5/sfzhang_2024/project/SO.20250627001--1-ATAC-yeast/NEW/2-fastqc_out/C-2_R1_val_1_fastqc.zip
+FastQC	all_sections	C-3_R1_val_1	/home/project5/sfzhang_2024/project/SO.20250627001--1-ATAC-yeast/NEW/2-fastqc_out/C-3_R1_val_1_fastqc.zip
+FastQC	all_sections	C-2_R2_val_2	/home/project5/sfzhang_2024/project/SO.20250627001--1-ATAC-yeast/NEW/2-fastqc_out/C-2_R2_val_2_fastqc.zip
+FastQC	all_sections	C-3_R2_val_2	/home/project5/sfzhang_2024/project/SO.20250627001--1-ATAC-yeast/NEW/2-fastqc_out/C-3_R2_val_2_fastqc.zip
+FastQC	all_sections	O-3_R1_val_1	/home/project5/sfzhang_2024/project/SO.20250627001--1-ATAC-yeast/NEW/2-fastqc_out/O-3_R1_val_1_fastqc.zip
+FastQC	all_sections	O-1_R2_val_2	/home/project5/sfzhang_2024/project/SO.20250627001--1-ATAC-yeast/NEW/2-fastqc_out/O-1_R2_val_2_fastqc.zip
+FastQC	all_sections	O-2_R1_val_1	/home/project5/sfzhang_2024/project/SO.20250627001--1-ATAC-yeast/NEW/2-fastqc_out/O-2_R1_val_1_fastqc.zip

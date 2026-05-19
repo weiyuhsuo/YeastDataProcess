@@ -1,0 +1,487 @@
+脚本开始执行...
+日志文件: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/build_numpy.log
+
+============================================================
+   Numpy 训练数据构建流程
+============================================================
+⏰ 开始时间: 2025-10-24 18:45:37
+📂 输出目录: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537
+📝 日志文件: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/build_numpy.log
+============================================================
+
+▶ 步骤 1/8: 读取表达矩阵...
+   ✅ 表达数据GSM数量: 435
+
+▶ 步骤 2/8: 匹配条件数据...
+   ✅ 条件数据GSM数量: 422
+   ✅ 交集GSM数量: 414
+   ⚠️ 仅表达无条件: 21
+   ⚠️ 仅条件无表达: 8
+   🎯 最终样本数: 414
+
+▶ 步骤 3/8: 创建条件编码器...
+创建条件编码器...
+条件数据原始列名: ['GSE（不作训练条件）', 'GSM（不作训练条件）', '菌株', '预培养培养基', '预培养碳源A（默认Glucose）', '预培养碳源A浓度（默认2%）', '预培养碳源B（默认Glucose）', '预培养碳源B浓度（默认2%）', '预培养氮源', '预培养氮源浓度', '预培养时间（min）', '预培养温度（默认30）', '预培养终点（默认0.02）', '加药培养培养基（默认与预培养相同）', '加药培养碳源（默认Glucose）', '加药培养碳源浓度（默认2%）', '加药培养氮源', '加药培养氮源浓度', '加药培养PH（默认7）', '加药培养温度（默认30）', '加药培养时间（min）', '药物A', '浓度A（mM）', '药物B', '浓度B', '药物C', '浓度C', '处理', '处理时间（min）', '预留1', '预留2', '预留3', '预留4', '预留5']
+找到GSM列: GSM（不作训练条件）
+筛选前条件数据样本数: 422
+筛选后条件数据样本数: 414
+用于编码的列: ['菌株', '预培养培养基', '预培养碳源A（默认Glucose）', '预培养碳源A浓度（默认2%）', '预培养碳源B（默认Glucose）', '预培养碳源B浓度（默认2%）', '预培养氮源', '预培养氮源浓度', '预培养时间（min）', '预培养温度（默认30）', '预培养终点（默认0.02）', '加药培养培养基（默认与预培养相同）', '加药培养碳源（默认Glucose）', '加药培养碳源浓度（默认2%）', '加药培养氮源', '加药培养氮源浓度', '加药培养PH（默认7）', '加药培养温度（默认30）', '加药培养时间（min）', '药物A', '浓度A（mM）', '药物B', '浓度B', '药物C', '浓度C', '处理', '处理时间（min）', '预留1', '预留2', '预留3', '预留4', '预留5']
+预处理数值列...
+预处理独热编码列...
+按原始列顺序创建编码器...
+独热编码特征: ['菌株', '预培养碳源A（默认Glucose）', '预培养碳源B（默认Glucose）', '预培养氮源', '加药培养培养基（默认与预培养相同）', '加药培养碳源（默认Glucose）', '加药培养氮源', '药物A', '药物B', '药物C', '处理', '预留1', '预留2', '预留3', '预留4', '预留5']
+Min-Max缩放特征: ['预培养碳源A浓度（默认2%）', '预培养碳源B浓度（默认2%）', '预培养氮源浓度', '预培养时间（min）', '预培养温度（默认30）', '预培养终点（默认0.02）', '加药培养碳源浓度（默认2%）', '加药培养氮源浓度', '加药培养PH（默认7）', '加药培养温度（默认30）', '加药培养时间（min）', '浓度A（mM）', '浓度B', '浓度C', '处理时间（min）']
+编码后特征形状: (414, 74)
+
+=== 编码映射详情（按原始列顺序） ===
+
+📋 列: 菌株
+  类型: 独热编码
+  唯一值数量: 8
+  唯一值: ['BY25598', 'BY4741', 'BY4742', 'BY4743', 'CEN.PK', 'GSY147', 'W303', 'W303a']
+    'BY25598' → 第0维 = 1
+    'BY4741' → 第1维 = 1
+    'BY4742' → 第2维 = 1
+    'BY4743' → 第3维 = 1
+    'CEN.PK' → 第4维 = 1
+    'GSY147' → 第5维 = 1
+    'W303' → 第6维 = 1
+    'W303a' → 第7维 = 1
+
+📋 列: 预培养培养基
+
+📋 列: 预培养碳源A（默认Glucose）
+  类型: 独热编码
+  唯一值数量: 6
+  唯一值: ['0', 'Galactose', 'Glucose', 'Glycerol', 'Isobutanol', 'Raffinose']
+    '0' → 第8维 = 1
+    'Galactose' → 第9维 = 1
+    'Glucose' → 第10维 = 1
+    'Glycerol' → 第11维 = 1
+    'Isobutanol' → 第12维 = 1
+    'Raffinose' → 第13维 = 1
+
+📋 列: 预培养碳源A浓度（默认2%）
+  类型: Min-Max缩放
+  原始范围: [0.0000, 0.0200]
+  缩放后范围: [0, 1]
+  对应第14维
+
+📋 列: 预培养碳源B（默认Glucose）
+  类型: 独热编码
+  唯一值数量: 3
+  唯一值: ['Ethanol', 'Galactose', 'Glucose']
+    'Ethanol' → 第15维 = 1
+    'Galactose' → 第16维 = 1
+    'Glucose' → 第17维 = 1
+
+📋 列: 预培养碳源B浓度（默认2%）
+  类型: Min-Max缩放
+  原始范围: [0.0100, 0.0200]
+  缩放后范围: [0, 1]
+  对应第18维
+
+📋 列: 预培养氮源
+  类型: 独热编码
+  唯一值数量: 1
+  唯一值: ['0']
+    '0' → 第19维 = 1
+
+📋 列: 预培养氮源浓度
+  类型: Min-Max缩放
+  原始范围: [0.0000, 0.0000]
+  缩放后范围: [0, 1]
+  对应第20维
+
+📋 列: 预培养时间（min）
+  类型: Min-Max缩放
+  原始范围: [0.0000, 840.0000]
+  缩放后范围: [0, 1]
+  对应第21维
+
+📋 列: 预培养温度（默认30）
+  类型: Min-Max缩放
+  原始范围: [25.0000, 30.0000]
+  缩放后范围: [0, 1]
+  对应第22维
+
+📋 列: 预培养终点（默认0.02）
+  类型: Min-Max缩放
+  原始范围: [0.0200, 1.0000]
+  缩放后范围: [0, 1]
+  对应第23维
+
+📋 列: 加药培养培养基（默认与预培养相同）
+  类型: 独热编码
+  唯一值数量: 4
+  唯一值: ['SC', 'YM', 'YM+WYF', 'YPD']
+    'SC' → 第24维 = 1
+    'YM' → 第25维 = 1
+    'YM+WYF' → 第26维 = 1
+    'YPD' → 第27维 = 1
+
+📋 列: 加药培养碳源（默认Glucose）
+  类型: 独热编码
+  唯一值数量: 8
+  唯一值: ['0', 'CRCM', 'Galactose', 'Glucose', 'Glycerol', 'NRCM', 'Raffinose', 'methyl methanesulfonate (MMS)']
+    '0' → 第28维 = 1
+    'CRCM' → 第29维 = 1
+    'Galactose' → 第30维 = 1
+    'Glucose' → 第31维 = 1
+    'Glycerol' → 第32维 = 1
+    'NRCM' → 第33维 = 1
+    'Raffinose' → 第34维 = 1
+    'methyl methanesulfonate (MMS)' → 第35维 = 1
+
+📋 列: 加药培养碳源浓度（默认2%）
+  类型: Min-Max缩放
+  原始范围: [0.0000, 0.0300]
+  缩放后范围: [0, 1]
+  对应第36维
+
+📋 列: 加药培养氮源
+  类型: 独热编码
+  唯一值数量: 1
+  唯一值: ['0']
+    '0' → 第37维 = 1
+
+📋 列: 加药培养氮源浓度
+  类型: Min-Max缩放
+  原始范围: [0.0000, 0.0000]
+  缩放后范围: [0, 1]
+  对应第38维
+
+📋 列: 加药培养PH（默认7）
+  类型: Min-Max缩放
+  原始范围: [5.0000, 7.0000]
+  缩放后范围: [0, 1]
+  对应第39维
+
+📋 列: 加药培养温度（默认30）
+  类型: Min-Max缩放
+  原始范围: [25.0000, 42.0000]
+  缩放后范围: [0, 1]
+  对应第40维
+
+📋 列: 加药培养时间（min）
+  类型: Min-Max缩放
+  原始范围: [0.0000, 1440.0000]
+  缩放后范围: [0, 1]
+  对应第41维
+
+📋 列: 药物A
+  类型: 独热编码
+  唯一值数量: 18
+  唯一值: ['0', '4-thiouracil', 'Cr41', 'D-lactic acid', 'Fe²⁺', 'H2O2', 'L-lactic acid', 'NaCl', 'PeAfpA', 'Sulfometuron methyl', 'Trp', 'Trp+IB', 'auxin', 'borrelidin', 'cysteine', 'hydroxurea', 'rapamycin', '磷酸钾']
+    '0' → 第42维 = 1
+    '4-thiouracil' → 第43维 = 1
+    'Cr41' → 第44维 = 1
+    'D-lactic acid' → 第45维 = 1
+    'Fe²⁺' → 第46维 = 1
+    'H2O2' → 第47维 = 1
+    'L-lactic acid' → 第48维 = 1
+    'NaCl' → 第49维 = 1
+    'PeAfpA' → 第50维 = 1
+    'Sulfometuron methyl' → 第51维 = 1
+    'Trp' → 第52维 = 1
+    'Trp+IB' → 第53维 = 1
+    'auxin' → 第54维 = 1
+    'borrelidin' → 第55维 = 1
+    'cysteine' → 第56维 = 1
+    'hydroxurea' → 第57维 = 1
+    'rapamycin' → 第58维 = 1
+    '磷酸钾' → 第59维 = 1
+
+📋 列: 浓度A（mM）
+  类型: Min-Max缩放
+  原始范围: [0.0000, 700.0000]
+  缩放后范围: [0, 1]
+  对应第60维
+
+📋 列: 药物B
+  类型: 独热编码
+  唯一值数量: 1
+  唯一值: ['0']
+    '0' → 第61维 = 1
+
+📋 列: 浓度B
+  类型: Min-Max缩放
+  原始范围: [0.0000, 0.0000]
+  缩放后范围: [0, 1]
+  对应第62维
+
+📋 列: 药物C
+  类型: 独热编码
+  唯一值数量: 1
+  唯一值: ['0']
+    '0' → 第63维 = 1
+
+📋 列: 浓度C
+  类型: Min-Max缩放
+  原始范围: [0.0000, 0.0000]
+  缩放后范围: [0, 1]
+  对应第64维
+
+📋 列: 处理
+  类型: 独热编码
+  唯一值数量: 3
+  唯一值: ['0', 'Laser', 'Pi depletion']
+    '0' → 第65维 = 1
+    'Laser' → 第66维 = 1
+    'Pi depletion' → 第67维 = 1
+
+📋 列: 处理时间（min）
+  类型: Min-Max缩放
+  原始范围: [0.0000, 360.0000]
+  缩放后范围: [0, 1]
+  对应第68维
+
+📋 列: 预留1
+  类型: 独热编码
+  唯一值数量: 1
+  唯一值: ['0']
+    '0' → 第69维 = 1
+
+📋 列: 预留2
+  类型: 独热编码
+  唯一值数量: 1
+  唯一值: ['0']
+    '0' → 第70维 = 1
+
+📋 列: 预留3
+  类型: 独热编码
+  唯一值数量: 1
+  唯一值: ['0']
+    '0' → 第71维 = 1
+
+📋 列: 预留4
+  类型: 独热编码
+  唯一值数量: 1
+  唯一值: ['0']
+    '0' → 第72维 = 1
+
+📋 列: 预留5
+  类型: 独热编码
+  唯一值数量: 1
+  唯一值: ['0']
+    '0' → 第73维 = 1
+
+✅ 总特征维度: 74
+==================================================
+📄 编码映射信息已保存: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/encoding_mapping_info.json
+   ✅ 条件编码器已创建，期望维度: 74
+
+▶ 步骤 4/8: 加载并编码实验条件...
+加载实验条件数据...
+找到GSM列: GSM（不作训练条件）
+
+=== 条件数据过滤结果 ===
+📊 输入的表达数据GSM数量: 414
+📊 条件数据中的GSM数量: 422
+✅ 匹配成功的GSM数量: 414
+❌ 表达数据中有但条件数据中没有的GSM: 0
+❌ 条件数据中有但表达数据中没有的GSM: 8
+原始条件数据形状: (414, 34)
+用于编码的列: ['菌株', '预培养培养基', '预培养碳源A（默认Glucose）', '预培养碳源A浓度（默认2%）', '预培养碳源B（默认Glucose）', '预培养碳源B浓度（默认2%）', '预培养氮源', '预培养氮源浓度', '预培养时间（min）', '预培养温度（默认30）', '预培养终点（默认0.02）', '加药培养培养基（默认与预培养相同）', '加药培养碳源（默认Glucose）', '加药培养碳源浓度（默认2%）', '加药培养氮源', '加药培养氮源浓度', '加药培养PH（默认7）', '加药培养温度（默认30）', '加药培养时间（min）', '药物A', '浓度A（mM）', '药物B', '浓度B', '药物C', '浓度C', '处理', '处理时间（min）', '预留1', '预留2', '预留3', '预留4', '预留5']
+编码用条件数据形状: (414, 32)
+编码条件数据...
+编码后特征形状: (414, 74)
+   ✅ 编码完成: (414, 74) (维度匹配)
+
+▶ 步骤 5/8: 加载基因映射与位置...
+加载基因映射信息...
+基因映射数量: 14754
+从BED文件加载TSS位置: /Users/weiyushuo/Downloads/code/BuildNumpy/data/Sc_EPDnew_cleaned.bed
+BED文件总基因数: 5117，其中标准化映射成功: 4949，未映射: 168
+TSS信息使用: 5117个基因，CDS起点备选: 0个基因
+从备用注释文件加载缺失基因: /Users/weiyushuo/Downloads/code/BuildNumpy/data/ncbiRefSeqCurated.txt
+从备用注释文件补充基因数: 1060
+最终总基因数: 6177
+   ✅ 基因映射: 14754 条
+   ✅ 基因位置: 6177 个基因
+
+============================================================
+   基因映射来源统计（TSS / CDS±93 / 未映射）
+============================================================
+✅ 总基因数: 7169
+   ├─ TSS来源: 5065 (70.65%)
+   ├─ CDS±93来源: 1060 (14.79%)
+   └─ 未映射: 1044 (14.56%)
+📄 详情: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/mapping_stats.json, /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/mapping_status.csv
+============================================================
+
+
+▶ 步骤 6/8: 加载表达数据...
+加载表达数据...
+对表达矩阵进行基础预处理...
+原始TPM数据统计 - 均值: 637.5785, 中位数: 21.5382
+零值比例: 16.79%
+表达数据形状: (7286, 414)
+   ✅ 表达矩阵: (7286, 414) (基因 × 样本)
+
+▶ 步骤 7/8: 批量处理 Peak 数据...
+   待处理数据集: 1 个
+
+   [1/1] 处理: ATAC1
+
+============================================================
+   Building Sample: ATAC1
+============================================================
+✅ Number of peaks: 4049
+✅ Base features: 284 dims (283 motifs + 1 accessibility)
+✅ Number of samples: 414
+✅ Condition features: 74 dims
+  分配表达值...
+  链特异性分配: 开启
+预处理：过滤无效表达值...
+总基因数: 7286, 有效基因数: 7030
+✅ 能分配表达值的基因数: 6094 (来自7030个有效表达基因)
+✅ 分配统计: 单peak基因 2641 个, 多peak基因 2896 个
+✅ 总gene-peak连接数: 9241
+✅ 平均每个基因对应: 1.52 个peaks
+
+  📊 Peak Expression Statistics (Original TPM values):
+  Mixed expression (sum of strands):
+    Mean: 952.27, Median: 47.56
+    Min: 0.00, Max: 1024509.94
+    25%: 11.31, 75%: 156.07
+    90%: 424.25, 95%: 899.92
+    Zero values: 92865 / 1676286 (5.54%)
+
+  Positive strand expression:
+    Mean: 475.21, Median: 10.84
+    Min: 0.00, Max: 1024509.94
+    25%: 0.00, 75%: 59.74
+    90%: 198.55, 95%: 401.76
+    Zero values: 417053 / 1676286 (24.88%)
+
+  Negative strand expression:
+    Mean: 477.06, Median: 9.66
+    Min: 0.00, Max: 799131.88
+    25%: 0.00, 75%: 57.57
+    90%: 198.14, 95%: 411.60
+    Zero values: 430722 / 1676286 (25.70%)
+
+  📝 Note: Using log2(TPM+1) transformation (bio-informatics standard)
+
+  📊 Peak Expression Statistics (After log2 transformation):
+  Positive strand expression (log2):
+    Mean: 3.5914, Median: 3.5652
+    Min: 0.0000, Max: 19.9665
+    25%: 0.0065, 75%: 5.9247
+  Negative strand expression (log2):
+    Mean: 3.5181, Median: 3.4146
+    Min: 0.0000, Max: 19.6081
+    25%: 0.0000, 75%: 5.8722
+  📝 Note: No Min-Max normalization applied, using raw log2(peak_expr+1) values
+  ✅ Created data array with 2D expression (positive + negative): (414, 4049, 360)
+     Expression dimensions: [:, :, -2] = positive strand, [:, :, -1] = negative strand
+标签文件未提供或不存在，写入占位labels (-1)...
+
+------------------------------------------------------------
+   Gene-Peak 关系分析与统计
+------------------------------------------------------------
+
+============================================================
+   All Strands
+============================================================
+✅ Total relations: 9241 gene-peak connections
+✅ Unique genes: 5536
+✅ Unique peaks: 3898
+
+📊 Gene → Peak Statistics (based on 5536 genes):
+   Mean peaks per gene: 1.67
+   Median: 2
+   Range: [1, 6]
+
+📊 Peak → Gene Statistics (based on 3898 peaks):
+   Mean genes per peak: 2.37
+   Median: 2
+   Range: [1, 7]
+
+📊 Cross-Average (Avg peaks per gene, for genes linked to each peak):
+   Mean: 1.98
+   Median: 2.00
+   Range: [1.00, 6.00]
+
+============================================================
+   Positive Strand (+)
+============================================================
+✅ Total relations: 4629 gene-peak connections
+✅ Unique genes: 2770
+✅ Unique peaks: 3160
+
+📊 Gene → Peak Statistics (based on 2770 genes):
+   Mean peaks per gene: 1.67
+   Median: 2
+   Range: [1, 5]
+
+📊 Peak → Gene Statistics (based on 3160 peaks):
+   Mean genes per peak: 1.46
+   Median: 1
+   Range: [1, 4]
+
+📊 Cross-Average (Avg peaks per gene, for genes linked to each peak):
+   Mean: 1.98
+   Median: 2.00
+   Range: [1.00, 5.00]
+
+============================================================
+   Negative Strand (-)
+============================================================
+✅ Total relations: 4612 gene-peak connections
+✅ Unique genes: 2766
+✅ Unique peaks: 3124
+
+📊 Gene → Peak Statistics (based on 2766 genes):
+   Mean peaks per gene: 1.67
+   Median: 2
+   Range: [1, 6]
+
+📊 Peak → Gene Statistics (based on 3124 peaks):
+   Mean genes per peak: 1.48
+   Median: 1
+   Range: [1, 5]
+
+📊 Cross-Average (Avg peaks per gene, for genes linked to each peak):
+   Mean: 2.01
+   Median: 2.00
+   Range: [1.00, 6.00]
+
+============================================================
+📄 Detailed analysis: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/ATAC1_gene_peak_analysis.json
+📄 Relations detail: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/ATAC1_gene_peak_relations.csv
+
+------------------------------------------------------------
+   Peak Expression Statistics
+------------------------------------------------------------
+✅ 有表达值的peaks: 3898/4049
+✅ 平均表达值: 952.2673
+✅ 有基因关联的peaks: 3898/4049
+📄 详情: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/ATAC1_peak_expression_stats.csv
+------------------------------------------------------------
+
+✅ Saved: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/ATAC1.npz
+   Data array shape: (414, 4049, 360) (samples × peaks × features)
+   Feature breakdown: 284(base) + 74(conditions) + 2(expression) = 360
+   ✅ Validation passed: base features = 283 motifs + 1 accessibility
+   ✅ Expression features: 2D (positive strand + negative strand)
+
+------------------------------------------------------------
+   生成可视化图表
+------------------------------------------------------------
+📊 Figure 1: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/ATAC1_expression_analysis.png
+📊 Figure 2: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/ATAC1_cross_average_analysis.png
+📊 Figure 3: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/ATAC1_expression_heatmap.png
+------------------------------------------------------------
+
+   ✅ ATAC1 处理完成
+
+============================================================
+   构建流程完成
+============================================================
+⏰ 结束时间: 2025-10-24 18:48:38
+📂 输出目录: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537
+📝 日志文件: /Users/weiyushuo/Downloads/code/BuildNumpy/output/run_20251024_184537/build_numpy.log
+============================================================
+

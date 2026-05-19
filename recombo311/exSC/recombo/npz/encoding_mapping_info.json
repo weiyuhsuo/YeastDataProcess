@@ -1,0 +1,391 @@
+{
+  "column_order": [
+    "菌株",
+    "预培养培养基",
+    "预培养碳源A（默认Glucose）",
+    "预培养碳源A浓度（默认2%）",
+    "预培养碳源B（默认Glucose）",
+    "预培养碳源B浓度（默认2%）",
+    "预培养氮源",
+    "预培养氮源浓度",
+    "预培养时间（min）",
+    "预培养温度（默认30）",
+    "预培养终点（默认0.02）",
+    "加药培养培养基（默认与预培养相同）",
+    "加药培养碳源（默认Glucose）",
+    "加药培养碳源浓度（默认2%）",
+    "加药培养氮源",
+    "加药培养氮源浓度",
+    "加药培养PH（默认7）",
+    "加药培养温度（默认30）",
+    "加药培养时间（min）",
+    "药物A",
+    "浓度A（mM）",
+    "药物B",
+    "浓度B",
+    "药物C",
+    "浓度C",
+    "处理",
+    "处理时间（min）",
+    "预留1",
+    "预留2",
+    "预留3",
+    "预留4",
+    "预留5"
+  ],
+  "feature_mapping": {
+    "菌株": {
+      "type": "one_hot",
+      "values": [
+        "BY25598",
+        "BY4741",
+        "BY4742",
+        "BY4743",
+        "CEN.PK",
+        "GSY147",
+        "W303",
+        "W303a"
+      ],
+      "mapping": {
+        "BY25598": 0,
+        "BY4741": 1,
+        "BY4742": 2,
+        "BY4743": 3,
+        "CEN.PK": 4,
+        "GSY147": 5,
+        "W303": 6,
+        "W303a": 7
+      },
+      "start_idx": 0,
+      "end_idx": 7
+    },
+    "预培养碳源A（默认Glucose）": {
+      "type": "one_hot",
+      "values": [
+        "0",
+        "Galactose",
+        "Glucose",
+        "Glycerol",
+        "Isobutanol",
+        "Raffinose"
+      ],
+      "mapping": {
+        "0": 8,
+        "Galactose": 9,
+        "Glucose": 10,
+        "Glycerol": 11,
+        "Isobutanol": 12,
+        "Raffinose": 13
+      },
+      "start_idx": 8,
+      "end_idx": 13
+    },
+    "预培养碳源A浓度（默认2%）": {
+      "type": "min_max",
+      "min_value": 0.0,
+      "max_value": 0.02,
+      "feature_idx": 14
+    },
+    "预培养碳源B（默认Glucose）": {
+      "type": "one_hot",
+      "values": [
+        "Ethanol",
+        "Galactose",
+        "Glucose"
+      ],
+      "mapping": {
+        "Ethanol": 15,
+        "Galactose": 16,
+        "Glucose": 17
+      },
+      "start_idx": 15,
+      "end_idx": 17
+    },
+    "预培养碳源B浓度（默认2%）": {
+      "type": "min_max",
+      "min_value": 0.01,
+      "max_value": 0.02,
+      "feature_idx": 18
+    },
+    "预培养氮源": {
+      "type": "one_hot",
+      "values": [
+        "0"
+      ],
+      "mapping": {
+        "0": 19
+      },
+      "start_idx": 19,
+      "end_idx": 19
+    },
+    "预培养氮源浓度": {
+      "type": "min_max",
+      "min_value": 0.0,
+      "max_value": 0.0,
+      "feature_idx": 20
+    },
+    "预培养时间（min）": {
+      "type": "min_max",
+      "min_value": 0.0,
+      "max_value": 840.0,
+      "feature_idx": 21
+    },
+    "预培养温度（默认30）": {
+      "type": "min_max",
+      "min_value": 25.0,
+      "max_value": 30.0,
+      "feature_idx": 22
+    },
+    "预培养终点（默认0.02）": {
+      "type": "min_max",
+      "min_value": 0.02,
+      "max_value": 1.0,
+      "feature_idx": 23
+    },
+    "加药培养培养基（默认与预培养相同）": {
+      "type": "one_hot",
+      "values": [
+        "SC",
+        "YM",
+        "YM+WYF",
+        "YPD"
+      ],
+      "mapping": {
+        "SC": 24,
+        "YM": 25,
+        "YM+WYF": 26,
+        "YPD": 27
+      },
+      "start_idx": 24,
+      "end_idx": 27
+    },
+    "加药培养碳源（默认Glucose）": {
+      "type": "one_hot",
+      "values": [
+        "0",
+        "CRCM",
+        "Galactose",
+        "Glucose",
+        "Glycerol",
+        "NRCM",
+        "Raffinose",
+        "methyl methanesulfonate (MMS)"
+      ],
+      "mapping": {
+        "0": 28,
+        "CRCM": 29,
+        "Galactose": 30,
+        "Glucose": 31,
+        "Glycerol": 32,
+        "NRCM": 33,
+        "Raffinose": 34,
+        "methyl methanesulfonate (MMS)": 35
+      },
+      "start_idx": 28,
+      "end_idx": 35
+    },
+    "加药培养碳源浓度（默认2%）": {
+      "type": "min_max",
+      "min_value": 0.0,
+      "max_value": 0.03,
+      "feature_idx": 36
+    },
+    "加药培养氮源": {
+      "type": "one_hot",
+      "values": [
+        "0"
+      ],
+      "mapping": {
+        "0": 37
+      },
+      "start_idx": 37,
+      "end_idx": 37
+    },
+    "加药培养氮源浓度": {
+      "type": "min_max",
+      "min_value": 0.0,
+      "max_value": 0.0,
+      "feature_idx": 38
+    },
+    "加药培养PH（默认7）": {
+      "type": "min_max",
+      "min_value": 5.0,
+      "max_value": 7.0,
+      "feature_idx": 39
+    },
+    "加药培养温度（默认30）": {
+      "type": "min_max",
+      "min_value": 25.0,
+      "max_value": 42.0,
+      "feature_idx": 40
+    },
+    "加药培养时间（min）": {
+      "type": "min_max",
+      "min_value": 0.0,
+      "max_value": 1440.0,
+      "feature_idx": 41
+    },
+    "药物A": {
+      "type": "one_hot",
+      "values": [
+        "0",
+        "4-thiouracil",
+        "Cr41",
+        "D-lactic acid",
+        "Fe²⁺",
+        "H2O2",
+        "L-lactic acid",
+        "NaCl",
+        "PeAfpA",
+        "Sulfometuron methyl",
+        "Trp",
+        "Trp+IB",
+        "auxin",
+        "borrelidin",
+        "cysteine",
+        "hydroxurea",
+        "rapamycin",
+        "磷酸钾"
+      ],
+      "mapping": {
+        "0": 42,
+        "4-thiouracil": 43,
+        "Cr41": 44,
+        "D-lactic acid": 45,
+        "Fe²⁺": 46,
+        "H2O2": 47,
+        "L-lactic acid": 48,
+        "NaCl": 49,
+        "PeAfpA": 50,
+        "Sulfometuron methyl": 51,
+        "Trp": 52,
+        "Trp+IB": 53,
+        "auxin": 54,
+        "borrelidin": 55,
+        "cysteine": 56,
+        "hydroxurea": 57,
+        "rapamycin": 58,
+        "磷酸钾": 59
+      },
+      "start_idx": 42,
+      "end_idx": 59
+    },
+    "浓度A（mM）": {
+      "type": "min_max",
+      "min_value": 0.0,
+      "max_value": 700.0,
+      "feature_idx": 60
+    },
+    "药物B": {
+      "type": "one_hot",
+      "values": [
+        "0"
+      ],
+      "mapping": {
+        "0": 61
+      },
+      "start_idx": 61,
+      "end_idx": 61
+    },
+    "浓度B": {
+      "type": "min_max",
+      "min_value": 0.0,
+      "max_value": 0.0,
+      "feature_idx": 62
+    },
+    "药物C": {
+      "type": "one_hot",
+      "values": [
+        "0"
+      ],
+      "mapping": {
+        "0": 63
+      },
+      "start_idx": 63,
+      "end_idx": 63
+    },
+    "浓度C": {
+      "type": "min_max",
+      "min_value": 0.0,
+      "max_value": 0.0,
+      "feature_idx": 64
+    },
+    "处理": {
+      "type": "one_hot",
+      "values": [
+        "0",
+        "Laser",
+        "Pi depletion"
+      ],
+      "mapping": {
+        "0": 65,
+        "Laser": 66,
+        "Pi depletion": 67
+      },
+      "start_idx": 65,
+      "end_idx": 67
+    },
+    "处理时间（min）": {
+      "type": "min_max",
+      "min_value": 0.0,
+      "max_value": 360.0,
+      "feature_idx": 68
+    },
+    "预留1": {
+      "type": "one_hot",
+      "values": [
+        "0"
+      ],
+      "mapping": {
+        "0": 69
+      },
+      "start_idx": 69,
+      "end_idx": 69
+    },
+    "预留2": {
+      "type": "one_hot",
+      "values": [
+        "0"
+      ],
+      "mapping": {
+        "0": 70
+      },
+      "start_idx": 70,
+      "end_idx": 70
+    },
+    "预留3": {
+      "type": "one_hot",
+      "values": [
+        "0"
+      ],
+      "mapping": {
+        "0": 71
+      },
+      "start_idx": 71,
+      "end_idx": 71
+    },
+    "预留4": {
+      "type": "one_hot",
+      "values": [
+        "0"
+      ],
+      "mapping": {
+        "0": 72
+      },
+      "start_idx": 72,
+      "end_idx": 72
+    },
+    "预留5": {
+      "type": "one_hot",
+      "values": [
+        "0"
+      ],
+      "mapping": {
+        "0": 73
+      },
+      "start_idx": 73,
+      "end_idx": 73
+    }
+  },
+  "total_features": 74
+}

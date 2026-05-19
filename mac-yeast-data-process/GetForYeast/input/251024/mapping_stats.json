@@ -1,0 +1,9 @@
+{
+  "total_genes_in_expression": 7169,
+  "via_TSS_count": 5065,
+  "via_CDS±93_count": 1060,
+  "unmapped_count": 1044,
+  "via_TSS_ratio": 0.706514,
+  "via_CDS±93_ratio": 0.147859,
+  "unmapped_ratio": 0.145627
+}

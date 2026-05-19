@@ -1,0 +1,35 @@
+top50 交集统计
+============================================================
+one_to_one_relations 总行数: 2272
+one_to_one_relations 唯一peak_id: 1760
+one_to_one_relations 唯一gene_name: 2268
+
+top peaks(accuracy) 总行数(pos+neg): 4650
+top peaks(accuracy) 唯一norm_peak_id: 3550
+
+交集关系行数(按 peak+strand 匹配): 1626
+交集唯一peak数: 1351
+交集唯一gene数: 1626
+
+交集基因(前20条，按peak数降序):
+gene_name,n_relations,n_unique_peaks,strands,relation_peak_ids
+YAL004W,1,1,+,fine_s90_e100_peak_47
+YAL017W,1,1,+,fine_s90_e100_peak_39
+YAL019W,1,1,+,fine_s90_e100_peak_38
+YAL021C,1,1,-,fine_s90_e100_peak_38
+YAL023C,1,1,-,fine_s90_e100_peak_37
+YAL024C,1,1,-,fine_s90_e100_peak_36
+YAL030W,1,1,+,fine_s90_e100_peak_32
+YAL031C,1,1,-,fine_s90_e100_peak_32
+YAL035W,1,1,+,fine_s90_e100_peak_24
+YAL036C,1,1,-,fine_s90_e100_peak_24
+YAL037C-B,1,1,-,fine_s90_e100_peak_23
+YAL037W,1,1,+,fine_s90_e100_peak_23
+YAL038W,1,1,+,fine_s90_e100_peak_22
+YAL039C,1,1,-,fine_s90_e100_peak_22
+YAL040C,1,1,-,fine_s90_e100_peak_21
+YAL049C,1,1,-,fine_s90_e100_peak_17
+YAL051W,1,1,+,fine_s90_e100_peak_16
+YAL054C,1,1,-,fine_s90_e100_peak_15
+YAL055W,1,1,+,fine_s90_e100_peak_13
+YAL056W,1,1,+,fine_s90_e100_peak_12

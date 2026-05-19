@@ -1,0 +1,3 @@
+增强条件筛选结果
+============================================================
+accuracy_top_fraction: 0.1 (top10%)\nexpr_top50_sample_ratio >= 0.8\n\none_to_one_relations 行数: 2272\ntop peaks pos数: 465\ntop peaks neg数: 465\nacc∩relation 关系行数: 221\nacc∩relation 基因数: 221\n\n三条件(再加表达) 基因数: 26\n三条件(再加表达) 关系行数: 26\n

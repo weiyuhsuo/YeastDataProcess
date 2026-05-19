@@ -1,0 +1,36 @@
+构建npy文件维度：（12,1，features）
+12是12个rip1样本，每个样本共用motif+accessibility部分，只是实验条件部分要按样本的具体实验条件编码
+1是一个virtualpeak（实际上就是这个质粒中这个基因的启动子区域，我们将其设一个peak，并对其进行了fimo扫描，表达值直接用表达矩阵中的唯一基因即可，就是把这个基因直接赋值给这个virtualpeak）
+features 345维有四个部分：
+283个motif
+（完全按atac1的矩阵中的motif顺序排列，也是为了保持和训练数据一样的特征，注意我们也要进行归一化，但是归一化的max和min的依据要选取atac矩阵中的）
+1个可及性
+（我们设为1，相当于将其设为了最高的可及性）
+60维实验条件编码
+（都按训练阶段的编码来，要保持和训练阶段的输入一致，需要编码的列：培养基、碳源、氮源、预培养时间、预培养温度、预培养终点、加药培养温度、加药培养时间、加药培养终点、药物、浓度）
+1个表达值
+（因为只有1个virtualpeak，所以我们只取rip1/YEL024W即可，注意要除以100，因为拷贝数我们现在还不能加入输入，所以反向先/100等效）
+
+注意
+1.数据已经手动预处理好了
+2.流程参考：
+/home/rhyswei/Code/YeastDataProcess/4numpy/process_validation_data.py
+/home/rhyswei/Code/YeastDataProcess/4numpy/build_version3_trainable_numpy.py
+3.矩阵维度：1*284
+也就是1个peak 283个motif+1个atac
+4.
+表达矩阵：/home/rhyswei/Code/YeastDataProcess/11PlasmidExpression/data/OE数据/OE测试数据.csv
+实验条件：/home/rhyswei/Code/YeastDataProcess/11PlasmidExpression/data/OE数据/OE_样本信息_Rip.csv
+5.
+data/motif得分范围.txt
+包含完整的全局范围信息
+归一化公式说明
+数据统计信息
+6.
+data/normalize_function.py
+提供了使用全局范围进行归一化的Python函数
+可以直接导入使用
+确保归一化结果在0-1范围内
+7.
+motif顺序
+/home/rhyswei/Code/YeastDataProcess/11PlasmidExpression/data/motif_ids.txt

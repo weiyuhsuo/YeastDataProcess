@@ -1,0 +1,208 @@
+启动子改造替换序列numpy生成脚本开始执行...
+日志文件: /home/rhyswei/Code/YeastDataProcess/demos/PromoterEngineering/251209/build_numpy_replacements_20251209_154334.log
+
+============================================================
+   Numpy 训练数据构建流程（替换序列场景）
+============================================================
+⏰ 开始时间: 2025-12-09 15:43:34
+📂 输出目录: /home/rhyswei/Code/YeastDataProcess/demos/PromoterEngineering/251209
+📝 日志文件: /home/rhyswei/Code/YeastDataProcess/demos/PromoterEngineering/251209/build_numpy_replacements_20251209_154334.log
+============================================================
+
+▶ 步骤 1/5: 加载历史编码信息...
+加载历史编码信息: /home/rhyswei/Code/YeastDataProcess/data/numpyoutput/numpy250903v2/encoding_mapping_info.json
+✅ 成功加载历史编码信息
+  总特征维度: 74
+  列顺序: 32 列
+
+▶ 步骤 2/5: 读取条件数据...
+   ✅ 条件数据中的总GSM数量: 1
+   ✅ 启动子改造场景：将使用 1 个样本（表达值设为常数）
+   🎯 最终将使用 1 个样本进行训练
+
+▶ 步骤 3/5: 加载并编码实验条件...
+加载实验条件数据...
+条件数据原始形状: (1, 34)
+条件数据列名: ['GSE（不作训练条件）', 'GSM（不作训练条件）', '菌株', '预培养培养基', '预培养碳源A（默认Glucose）', '预培养碳源A浓度（默认2%）', '预培养碳源B（默认Glucose）', '预培养碳源B浓度（默认2%）', '预培养氮源', '预培养氮源浓度', '预培养时间（min）', '预培养温度（默认30）', '预培养终点（默认0.02）', '加药培养培养基（默认与预培养相同）', '加药培养碳源（默认Glucose）', '加药培养碳源浓度（默认2%）', '加药培养氮源', '加药培养氮源浓度', '加药培养PH（默认7）', '加药培养温度（默认30）', '加药培养时间（min）', '药物A', '浓度A（mM）', '药物B', '浓度B', '药物C', '浓度C', '处理', '处理时间（min）', '预留1', '预留2', '预留3', '预留4', '预留5']
+找到GSM列: GSM（不作训练条件）
+
+=== 条件数据过滤结果 ===
+📊 输入的表达数据GSM数量: 1
+📊 条件数据中的GSM数量: 1
+✅ 匹配成功的GSM数量: 1
+过滤后条件数据形状: (1, 34)
+基于历史编码信息手动编码条件数据...
+历史编码列顺序: ['菌株', '预培养培养基', '预培养碳源A（默认Glucose）', '预培养碳源A浓度（默认2%）', '预培养碳源B（默认Glucose）', '预培养碳源B浓度（默认2%）', '预培养氮源', '预培养氮源浓度', '预培养时间（min）', '预培养温度（默认30）', '预培养终点（默认0.02）', '加药培养培养基（默认与预培养相同）', '加药培养碳源（默认Glucose）', '加药培养碳源浓度（默认2%）', '加药培养氮源', '加药培养氮源浓度', '加药培养PH（默认7）', '加药培养温度（默认30）', '加药培养时间（min）', '药物A', '浓度A（mM）', '药物B', '浓度B', '药物C', '浓度C', '处理', '处理时间（min）', '预留1', '预留2', '预留3', '预留4', '预留5']
+可用列: 32/32
+预处理数值列...
+预处理独热编码列...
+  列 '菌株' 转换为字符串: BY4741
+  列 '预培养碳源A（默认Glucose）' 转换为字符串: Glucose
+  列 '预培养碳源B（默认Glucose）' 转换为字符串: Glucose
+  列 '预培养氮源' 转换为字符串: 0
+  列 '加药培养培养基（默认与预培养相同）' 转换为字符串: SC
+  列 '加药培养碳源（默认Glucose）' 转换为字符串: Glucose
+  列 '加药培养氮源' 转换为字符串: 0
+  列 '药物A' 转换为字符串: 0
+  列 '药物B' 转换为字符串: 0
+  列 '药物C' 转换为字符串: 0
+  列 '处理' 转换为字符串: 0
+  列 '预留1' 转换为字符串: 0
+  列 '预留2' 转换为字符串: 0
+  列 '预留3' 转换为字符串: 0
+  列 '预留4' 转换为字符串: 0
+  列 '预留5' 转换为字符串: 0
+手动编码条件数据...
+  菌株='BY4741' -> 特征1=1
+  预培养碳源A（默认Glucose）='Glucose' -> 特征10=1
+  预培养碳源A浓度（默认2%）=0.02 -> 特征14=1.0000
+  预培养碳源B（默认Glucose）='Glucose' -> 特征17=1
+  预培养碳源B浓度（默认2%）=0.02 -> 特征18=1.0000
+  预培养氮源='0' -> 特征19=1
+  预培养氮源浓度=0.0 -> 特征20=0.0000
+  预培养时间（min）=420.0 -> 特征21=0.5000
+  预培养温度（默认30）=30.0 -> 特征22=1.0000
+  预培养终点（默认0.02）=0.5 -> 特征23=0.4898
+  加药培养培养基（默认与预培养相同）='SC' -> 特征24=1
+  加药培养碳源（默认Glucose）='Glucose' -> 特征31=1
+  加药培养碳源浓度（默认2%）=0.02 -> 特征36=0.6667
+  加药培养氮源='0' -> 特征37=1
+  加药培养氮源浓度=0.0 -> 特征38=0.0000
+  加药培养PH（默认7）=7.0 -> 特征39=1.0000
+  加药培养温度（默认30）=30.0 -> 特征40=0.2941
+  加药培养时间（min）=0.0 -> 特征41=0.0000
+  药物A='0' -> 特征42=1
+  浓度A（mM）=0.0 -> 特征60=0.0000
+  药物B='0' -> 特征61=1
+  浓度B=0.0 -> 特征62=0.0000
+  药物C='0' -> 特征63=1
+  浓度C=0.0 -> 特征64=0.0000
+  处理='0' -> 特征65=1
+  处理时间（min）=0.0 -> 特征68=0.0000
+  预留1='0' -> 特征69=1
+  预留2='0' -> 特征70=1
+  预留3='0' -> 特征71=1
+  预留4='0' -> 特征72=1
+  预留5='0' -> 特征73=1
+手动编码后特征形状: (1, 74)
+期望特征维度: 74
+   ✅ 编码后条件形状: (1, 74)
+   ✅ 期望条件维度: 74
+   ✅ 条件维度匹配成功！
+
+▶ 步骤 4/5: 处理替换序列矩阵...
+   Matrix文件: /home/rhyswei/Code/YeastDataProcess/demos/PromoterEngineering/251209/ATAC1_replacements_matrix.csv
+   Summit文件: /home/rhyswei/Code/YeastDataProcess/demos/PromoterEngineering/ATAC1_peaks.narrowPeak
+   输出文件: /home/rhyswei/Code/YeastDataProcess/demos/PromoterEngineering/251209/ATAC1_replacements.npy
+
+============================================================
+   Building Sample: ATAC1_replacements
+============================================================
+   ℹ️ 使用ATAC1_peak_567作为参考位置: chrIV:276669
+✅ Number of samples (peaks): 5
+✅ Base features: 471 dims (470 motifs(已区分strand) + 1 accessibility)
+✅ Number of condition samples: 1
+✅ Condition features: 74 dims
+   ℹ️ 注意：替换序列场景中，matrix的行是样本（sequence_name），每个样本对应一个序列
+
+  分配表达值...
+  替换序列场景：所有peak表达值设为常数: 2.158294
+
+  📊 Peak Expression Statistics (Original TPM values):
+  Mixed expression (sum of strands):
+    Mean: 4.32, Median: 4.32
+    Min: 4.32, Max: 4.32
+    25%: 4.32, 75%: 4.32
+    90%: 4.32, 95%: 4.32
+    Zero values: 0 / 5 (0.00%)
+
+  Positive strand expression:
+    Mean: 2.16, Median: 2.16
+    Min: 2.16, Max: 2.16
+    25%: 2.16, 75%: 2.16
+    90%: 2.16, 95%: 2.16
+    Zero values: 0 / 5 (0.00%)
+
+  Negative strand expression:
+    Mean: 2.16, Median: 2.16
+    Min: 2.16, Max: 2.16
+    25%: 2.16, 75%: 2.16
+    90%: 2.16, 95%: 2.16
+    Zero values: 0 / 5 (0.00%)
+
+  📝 Note: Using log2(TPM+1) transformation (bio-informatics standard)
+
+  📊 Peak Expression Statistics (After log2 transformation):
+  Positive strand expression (log2):
+    Mean: 1.6591, Median: 1.6591
+    Min: 1.6591, Max: 1.6591
+    25%: 1.6591, 75%: 1.6591
+  Negative strand expression (log2):
+    Mean: 1.6591, Median: 1.6591
+    Min: 1.6591, Max: 1.6591
+    25%: 1.6591, 75%: 1.6591
+  📝 Note: No Min-Max normalization applied, using raw log2(peak_expr+1) values
+  ✅ Created data array with 2D expression (positive + negative): (1, 5, 547)
+     Expression dimensions: [:, :, -2] = positive strand, [:, :, -1] = negative strand
+
+✅ Saved: /home/rhyswei/Code/YeastDataProcess/demos/PromoterEngineering/251209/ATAC1_replacements.npz
+
+============================================================
+   📊 文件维度信息
+============================================================
+
+📦 主数据数组 (data):
+   Shape: (1, 5, 547)
+   维度含义: [样本数, Peak数, 特征数]
+   - 样本数: 1
+   - Peak数: 5
+   - 特征数: 547
+
+🔢 特征维度分解:
+   - Base features: 471 维
+     ├─ Motifs: 470 维
+     └─ Accessibility: 1 维
+   - Condition features: 74 维
+   - Expression features: 2 维
+     ├─ Positive strand: 1 维
+     └─ Negative strand: 1 维
+   ─────────────────────────────
+   总计: 547 维
+
+   ✅ 维度验证通过
+
+📋 元数据维度:
+   - peak_ids: 5 个 (list)
+   - labels: (5,) (shape)
+   - labels_pos: (5,) (shape)
+   - labels_neg: (5,) (shape)
+
+🔗 Gene-Peak映射矩阵维度:
+   - 正链 (g2p_pos):
+     ├─ Shape: (np.int32(0), np.int32(5)) (基因数 × Peak数)
+     ├─ 基因数: 0 (替换序列场景为0)
+     ├─ 非零元素: 0 个
+     └─ 基因ID数: 0 个
+   - 负链 (g2p_neg):
+     ├─ Shape: (np.int32(0), np.int32(5)) (基因数 × Peak数)
+     ├─ 基因数: 0 (替换序列场景为0)
+     ├─ 非零元素: 0 个
+     └─ 基因ID数: 0 个
+
+💾 文件大小:
+   - 文件路径: /home/rhyswei/Code/YeastDataProcess/demos/PromoterEngineering/251209/ATAC1_replacements.npz
+   - 文件大小: 0.01 MB (6,310 bytes)
+============================================================
+
+   ✅ Peak表达值转换参数已保存: /home/rhyswei/Code/YeastDataProcess/demos/PromoterEngineering/251209/ATAC1_replacements_peak_expression_transformation_params.json
+
+   ✅ 成功处理: ATAC1_replacements
+
+============================================================
+   构建流程完成
+============================================================
+⏰ 结束时间: 2025-12-09 15:43:35
+📂 输出目录: /home/rhyswei/Code/YeastDataProcess/demos/PromoterEngineering/251209
+📝 日志文件: /home/rhyswei/Code/YeastDataProcess/demos/PromoterEngineering/251209/build_numpy_replacements_20251209_154334.log
+============================================================
+

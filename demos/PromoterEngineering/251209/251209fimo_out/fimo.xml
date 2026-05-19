@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Begin document body -->
+<fimo version="5.5.7" release="Wed Jun 19 13:59:04 2024 -0700">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation=  xmlns:fimo="http://noble.gs.washington.edu/schema/fimo"
+>
+<command-line>fimo --oc 251209fimo_out yeast_jaspar_motifs.meme 5peaks.fasta</command-line>
+<settings>
+<setting name="output directory">251209fimo_out</setting>
+<setting name="MEME file name">yeast_jaspar_motifs.meme</setting>
+<setting name="sequence file name">5peaks.fasta</setting>
+<setting name="background file name">--nrdb--</setting>
+<setting name="allow clobber">true</setting>
+<setting name="compute q-values">true</setting>
+<setting name="parse genomic coord.">true</setting>
+<setting name="text only">false</setting>
+<setting name="scan both strands">true</setting>
+<setting name="output threshold">0.0001</setting>
+<setting name="threshold type">p-value</setting>
+<setting name="max stored scores">100000</setting>
+<setting name="pseudocount">0.1</setting>
+<setting name="verbosity">2</setting>
+</settings>
+<sequence-data num-sequences="5" num-residues="1065" />
+<alphabet name="DNA" like="dna">
+<letter id="A" symbol="A" complement="T" name="Adenine" colour="CC0000"/>
+<letter id="C" symbol="C" complement="G" name="Cytosine" colour="0000CC"/>
+<letter id="G" symbol="G" complement="C" name="Guanine" colour="FFB300"/>
+<letter id="T" symbol="T" aliases="U" complement="A" name="Thymine" colour="008000"/>
+<letter id="N" symbol="N" aliases="X." equals="ACGT" name="Any base"/>
+<letter id="V" symbol="V" equals="ACG" name="Not T"/>
+<letter id="H" symbol="H" equals="ACT" name="Not G"/>
+<letter id="D" symbol="D" equals="AGT" name="Not C"/>
+<letter id="B" symbol="B" equals="CGT" name="Not A"/>
+<letter id="M" symbol="M" equals="AC" name="Amino"/>
+<letter id="R" symbol="R" equals="AG" name="Purine"/>
+<letter id="W" symbol="W" equals="AT" name="Weak"/>
+<letter id="S" symbol="S" equals="CG" name="Strong"/>
+<letter id="Y" symbol="Y" equals="CT" name="Pyrimidine"/>
+<letter id="K" symbol="K" equals="GT" name="Keto"/>
+</alphabet>
+<motif name="MA0265.1.ABF1" alt="" width="16" best-possible-match="TCGTATAAAGTGATAT"/>
+<motif name="MA0266.1.ABF2" alt="" width="7" best-possible-match="CTCTAGA"/>
+<motif name="MA0267.1.ACE2" alt="" width="7" best-possible-match="ACCAGCA"/>
+<motif name="MA0268.1.ADR1" alt="" width="7" best-possible-match="ACCCCAC"/>
+<motif name="MA0269.1.AFT1" alt="" width="21" best-possible-match="TTACATATTGCACCCGATTGG"/>
+<motif name="MA0270.1.AFT2" alt="" width="8" best-possible-match="CACACCCC"/>
+<motif name="MA0271.1.ARG80" alt="" width="6" best-possible-match="AGACGC"/>
+<motif name="MA0272.1.ARG81" alt="" width="8" best-possible-match="GTGACTCT"/>
+<motif name="MA0273.1.ARO80" alt="" width="21" best-possible-match="GATAATTCTCGGCAAGTATGT"/>
+<motif name="MA0274.1.ARR1" alt="" width="8" best-possible-match="ACTTGAAT"/>
+<motif name="MA0275.1.ASG1" alt="" width="6" best-possible-match="CCGGAA"/>
+<motif name="MA0276.1.ASH1" alt="" width="10" best-possible-match="CCGGATCGGG"/>
+<motif name="MA0277.1.AZF1" alt="" width="9" best-possible-match="AAAAAGAAA"/>
+<motif name="MA0278.1.BAS1" alt="" width="21" best-possible-match="GCACAGCCAGAGTCAAGTCAA"/>
+<motif name="MA0279.1.CAD1" alt="" width="10" best-possible-match="ATTAGTAAGC"/>
+<motif name="MA0280.1.CAT8" alt="" width="6" best-possible-match="CCGGAA"/>
+<motif name="MA0281.1.CBF1" alt="" width="8" best-possible-match="GCACGTGA"/>
+<motif name="MA0282.1.CEP3" alt="" width="8" best-possible-match="CTCGGAAA"/>
+<motif name="MA0283.1.CHA4" alt="" width="8" best-possible-match="GGCGGAGA"/>
+<motif name="MA0284.1.CIN5" alt="" width="10" best-possible-match="TTACGTAATC"/>
+<motif name="MA0285.1.CRZ1" alt="" width="9" best-possible-match="CTAAGCCAC"/>
+<motif name="MA0286.1.CST6" alt="" width="9" best-possible-match="ATGACGTAA"/>
+<motif name="MA0287.1.CUP2" alt="" width="11" best-possible-match="CAGCAAAAATG"/>
+<motif name="MA0288.1.CUP9" alt="" width="9" best-possible-match="TGACACATT"/>
+<motif name="MA0289.1.DAL80" alt="" width="7" best-possible-match="CGATAAG"/>
+<motif name="MA0290.1.DAL81" alt="" width="19" best-possible-match="AAAAGCCGCGGGCGGGATT"/>
+<motif name="MA0291.1.DAL82" alt="" width="9" best-possible-match="AATGTGCGC"/>
+<motif name="MA0292.1.ECM22" alt="" width="7" best-possible-match="CTCCGGA"/>
+<motif name="MA0293.1.ECM23" alt="" width="11" best-possible-match="AAAGATCTAAA"/>
+<motif name="MA0294.1.EDS1" alt="" width="9" best-possible-match="CGGAAAAAT"/>
+<motif name="MA0295.1.FHL1" alt="" width="8" best-possible-match="GACGCAAA"/>
+<motif name="MA0296.1.FKH1" alt="" width="20" best-possible-match="TGAATTGTAAACAAAGAGGA"/>
+<motif name="MA0297.1.FKH2" alt="" width="7" best-possible-match="GTAAACA"/>
+<motif name="MA0299.1.GAL4" alt="" width="15" best-possible-match="CGGGGAACAGTACTC"/>
+<motif name="MA0300.1.GAT1" alt="" width="8" best-possible-match="CCGATAAG"/>
+<motif name="MA0301.1.GAT3" alt="" width="9" best-possible-match="AGATCTACA"/>
+<motif name="MA0302.1.GAT4" alt="" width="11" best-possible-match="AAAGATCTAAA"/>
+<motif name="MA0303.1.GCN4" alt="" width="21" best-possible-match="CAAGGGATGAGTCATACTTCA"/>
+<motif name="MA0304.1.GCR1" alt="" width="8" best-possible-match="TGGAAGCC"/>
+<motif name="MA0305.1.GCR2" alt="" width="7" best-possible-match="GCTTCCT"/>
+<motif name="MA0306.1.GIS1" alt="" width="9" best-possible-match="ACCCCTAAA"/>
+<motif name="MA0307.1.GLN3" alt="" width="5" best-possible-match="GATAA"/>
+<motif name="MA0308.1.GSM1" alt="" width="21" best-possible-match="ATTAAAAAACTCCGGAGTATA"/>
+<motif name="MA0309.1.GZF3" alt="" width="8" best-possible-match="TGATAAGA"/>
+<motif name="MA0310.1.HAC1" alt="" width="8" best-possible-match="GACACGTG"/>
+<motif name="MA0311.1.HAL9" alt="" width="5" best-possible-match="CGGAA"/>
+<motif name="MA0312.1.HAP1" alt="" width="8" best-possible-match="CGGAGATA"/>
+<motif name="MA0313.1.HAP2" alt="" width="5" best-possible-match="TTGGT"/>
+<motif name="MA0314.1.HAP3" alt="" width="15" best-possible-match="TCTGATTGGTTCAGA"/>
+<motif name="MA0316.1.HAP5" alt="" width="15" best-possible-match="TGGGATCTGATTGGT"/>
+<motif name="MA0317.1.HCM1" alt="" width="8" best-possible-match="ATAAACAA"/>
+<motif name="MA0318.1.HMRA2" alt="" width="8" best-possible-match="CATGTAAT"/>
+<motif name="MA0319.1.HSF1" alt="" width="8" best-possible-match="ATGGAACA"/>
+<motif name="MA0320.1.IME1" alt="" width="8" best-possible-match="CCGCCGAG"/>
+<motif name="MA0321.1.INO2" alt="" width="9" best-possible-match="GCATGTGAA"/>
+<motif name="MA0322.1.INO4" alt="" width="9" best-possible-match="GCATGTGAA"/>
+<motif name="MA0323.1.IXR1" alt="" width="15" best-possible-match="AAGCCGGAAGCGGGG"/>
+<motif name="MA0324.1.LEU3" alt="" width="10" best-possible-match="CCGTTACCGG"/>
+<motif name="MA0325.1.LYS14" alt="" width="8" best-possible-match="CCGGAATT"/>
+<motif name="MA0326.1.MAC1" alt="" width="8" best-possible-match="TTTGCTCA"/>
+<motif name="MA0327.1.HMRA1" alt="" width="7" best-possible-match="ACACAAT"/>
+<motif name="MA0328.1.MATALPHA2" alt="" width="9" best-possible-match="CATGTAATT"/>
+<motif name="MA0329.1.MBP1" alt="" width="7" best-possible-match="ACGCGTA"/>
+<motif name="MA0330.1.MBP1::SWI6" alt="" width="7" best-possible-match="ACGCGTT"/>
+<motif name="MA0331.1.MCM1" alt="" width="12" best-possible-match="CCCAATTAGGAA"/>
+<motif name="MA0332.1.MET28" alt="" width="6" best-possible-match="CTGTGG"/>
+<motif name="MA0333.1.MET31" alt="" width="9" best-possible-match="AGTGTGGCG"/>
+<motif name="MA0334.1.MET32" alt="" width="7" best-possible-match="CGCCACA"/>
+<motif name="MA0336.1.MGA1" alt="" width="21" best-possible-match="AGGACTATAGAACACTCTAAA"/>
+<motif name="MA0337.1.MIG1" alt="" width="7" best-possible-match="CCCCCGC"/>
+<motif name="MA0338.1.MIG2" alt="" width="7" best-possible-match="CCCCGCA"/>
+<motif name="MA0339.1.MIG3" alt="" width="7" best-possible-match="CCCCGCA"/>
+<motif name="MA0340.1.MOT3" alt="" width="6" best-possible-match="TAGGTA"/>
+<motif name="MA0341.1.MSN2" alt="" width="5" best-possible-match="AGGGG"/>
+<motif name="MA0342.1.MSN4" alt="" width="5" best-possible-match="AGGGG"/>
+<motif name="MA0343.1.NDT80" alt="" width="21" best-possible-match="TTTCCGGCCACAAAAACGCAA"/>
+<motif name="MA0344.1.NHP10" alt="" width="8" best-possible-match="GCCGGGGA"/>
+<motif name="MA0347.1.NRG1" alt="" width="20" best-possible-match="CTAGATCAGGGTCCATCGCA"/>
+<motif name="MA0348.1.OAF1" alt="" width="9" best-possible-match="TCGGAGATA"/>
+<motif name="MA0349.1.OPI1" alt="" width="7" best-possible-match="CGAACCG"/>
+<motif name="MA0350.1.TOD6" alt="" width="21" best-possible-match="AGGCACAGCTCATCGCGTTTT"/>
+<motif name="MA0351.1.DOT6" alt="" width="21" best-possible-match="TTCTGCACCTCATCGCATCCT"/>
+<motif name="MA0352.1.PDR1" alt="" width="8" best-possible-match="TCCGCGGA"/>
+<motif name="MA0353.1.PDR3" alt="" width="8" best-possible-match="TCCGCGGA"/>
+<motif name="MA0354.1.PDR8" alt="" width="8" best-possible-match="ACGGAGAT"/>
+<motif name="MA0355.1.PHD1" alt="" width="10" best-possible-match="ACCTGCAGCA"/>
+<motif name="MA0356.1.PHO2" alt="" width="6" best-possible-match="ATAATA"/>
+<motif name="MA0357.1.PHO4" alt="" width="8" best-possible-match="GCACGTGC"/>
+<motif name="MA0358.1.PUT3" alt="" width="8" best-possible-match="CCCGGGAA"/>
+<motif name="MA0359.1.RAP1" alt="" width="10" best-possible-match="CACCCATACA"/>
+<motif name="MA0360.1.RDR1" alt="" width="8" best-possible-match="TGCGGAAC"/>
+<motif name="MA0361.1.RDS1" alt="" width="7" best-possible-match="CGGCCGA"/>
+<motif name="MA0362.1.RDS2" alt="" width="7" best-possible-match="CTCGGGG"/>
+<motif name="MA0363.1.REB1" alt="" width="9" best-possible-match="GTTACCCGG"/>
+<motif name="MA0364.1.REI1" alt="" width="7" best-possible-match="CCCCTGA"/>
+<motif name="MA0365.1.RFX1" alt="" width="8" best-possible-match="GGTTGCTA"/>
+<motif name="MA0366.1.RGM1" alt="" width="5" best-possible-match="AGGGG"/>
+<motif name="MA0367.1.RGT1" alt="" width="11" best-possible-match="AATTTTTCCGG"/>
+<motif name="MA0368.1.RIM101" alt="" width="7" best-possible-match="CGCCAAG"/>
+<motif name="MA0369.1.RLM1" alt="" width="18" best-possible-match="AGTTCTATAAATAGATTC"/>
+<motif name="MA0370.1.RME1" alt="" width="10" best-possible-match="TCCAAAGGAA"/>
+<motif name="MA0371.1.ROX1" alt="" width="12" best-possible-match="TCCATTGTTCTC"/>
+<motif name="MA0372.1.RPH1" alt="" width="8" best-possible-match="ACCCCTAA"/>
+<motif name="MA0373.1.RPN4" alt="" width="7" best-possible-match="GGTGGCG"/>
+<motif name="MA0374.1.RSC3" alt="" width="7" best-possible-match="CGCGCGG"/>
+<motif name="MA0375.1.RSC30" alt="" width="8" best-possible-match="CGCGCGCG"/>
+<motif name="MA0376.1.RTG3" alt="" width="20" best-possible-match="ATATTAGCACGTGCTTAGTC"/>
+<motif name="MA0377.1.SFL1" alt="" width="21" best-possible-match="TAGAGAATAGAAGAAATAAAA"/>
+<motif name="MA0378.1.SFP1" alt="" width="21" best-possible-match="ATTGAAAAAAATTTTCTACGG"/>
+<motif name="MA0379.1.MOT2" alt="" width="5" best-possible-match="ATATA"/>
+<motif name="MA0380.1.SIP4" alt="" width="7" best-possible-match="CTCCGGA"/>
+<motif name="MA0381.1.SKN7" alt="" width="6" best-possible-match="GGCCAT"/>
+<motif name="MA0382.1.SKO1" alt="" width="8" best-possible-match="ACGTAATG"/>
+<motif name="MA0384.1.SNT2" alt="" width="11" best-possible-match="TGGTAGCGCCG"/>
+<motif name="MA0385.1.SOK2" alt="" width="11" best-possible-match="ACCTGCAGGCA"/>
+<motif name="MA0386.1.SPT15" alt="" width="21" best-possible-match="GACTAGATATATATATTCGAT"/>
+<motif name="MA0387.1.SPT2" alt="" width="10" best-possible-match="AATTAAAGAA"/>
+<motif name="MA0388.1.SPT23" alt="" width="8" best-possible-match="GAAATCAA"/>
+<motif name="MA0389.1.SRD1" alt="" width="8" best-possible-match="AGATCTAC"/>
+<motif name="MA0390.1.STB3" alt="" width="21" best-possible-match="GTCCAAAATTTTTCACTCTGG"/>
+<motif name="MA0391.1.STB4" alt="" width="7" best-possible-match="CTCGGAA"/>
+<motif name="MA0392.1.STB5" alt="" width="8" best-possible-match="CGGTGTTA"/>
+<motif name="MA0393.1.STE12" alt="" width="7" best-possible-match="TGAAACA"/>
+<motif name="MA0394.1.STP1" alt="" width="8" best-possible-match="TGCGGCGC"/>
+<motif name="MA0395.1.STP2" alt="" width="20" best-possible-match="TGATCGGCGCCGCACGACGA"/>
+<motif name="MA0396.1.STP3" alt="" width="9" best-possible-match="GCTAGCGCA"/>
+<motif name="MA0397.1.STP4" alt="" width="9" best-possible-match="GATAGCGCA"/>
+<motif name="MA0398.1.SUM1" alt="" width="9" best-possible-match="AAAATTTTT"/>
+<motif name="MA0399.1.SUT1" alt="" width="7" best-possible-match="CGCGGGG"/>
+<motif name="MA0400.1.SUT2" alt="" width="20" best-possible-match="ATGATAAACTCCGAAAATTT"/>
+<motif name="MA0401.1.SWI4" alt="" width="8" best-possible-match="ACGCGAAA"/>
+<motif name="MA0402.1.SWI5" alt="" width="8" best-possible-match="TGCTGGTT"/>
+<motif name="MA0403.1.TBF1" alt="" width="8" best-possible-match="AACCCTAA"/>
+<motif name="MA0404.1.TBS1" alt="" width="8" best-possible-match="CGGATCCG"/>
+<motif name="MA0405.1.TEA1" alt="" width="8" best-possible-match="GCGGACAT"/>
+<motif name="MA0406.1.TEC1" alt="" width="8" best-possible-match="ACATTCCC"/>
+<motif name="MA0407.1.THI2" alt="" width="15" best-possible-match="GGAAACTCTAAGAAC"/>
+<motif name="MA0408.1.TOS8" alt="" width="8" best-possible-match="CTGTCAAA"/>
+<motif name="MA0409.1.TYE7" alt="" width="7" best-possible-match="CACGTGA"/>
+<motif name="MA0410.1.UGA3" alt="" width="8" best-possible-match="CGGCGGGA"/>
+<motif name="MA0411.1.UPC2" alt="" width="7" best-possible-match="TATACGA"/>
+<motif name="MA0412.1.UME6" alt="" width="13" best-possible-match="TCGGCGGCTAATT"/>
+<motif name="MA0413.1.USV1" alt="" width="20" best-possible-match="AAATTCCCCCTGAATTTGTG"/>
+<motif name="MA0414.1.XBP1" alt="" width="7" best-possible-match="CTCGAGA"/>
+<motif name="MA0415.1.YAP1" alt="" width="20" best-possible-match="ATTTGCTTACGTAAGCTCGT"/>
+<motif name="MA0416.1.YAP3" alt="" width="8" best-possible-match="ATTACGTA"/>
+<motif name="MA0265.2.ABF1" alt="" width="20" best-possible-match="TTTTCGTATATAGTGATATT"/>
+<motif name="MA0279.2.CAD1" alt="" width="16" best-possible-match="ATTGCTTACTAATCAA"/>
+<motif name="MA0281.2.CBF1" alt="" width="15" best-possible-match="TGATCACGTGACCAA"/>
+<motif name="MA0284.2.CIN5" alt="" width="14" best-possible-match="TGATTACATAATCA"/>
+<motif name="MA0303.2.GCN4" alt="" width="11" best-possible-match="AATGACTCATC"/>
+<motif name="MA0312.2.HAP1" alt="" width="10" best-possible-match="GGCCGATAAA"/>
+<motif name="MA0314.2.HAP3" alt="" width="12" best-possible-match="TCTGATTGGCTC"/>
+<motif name="MA0347.2.NRG1" alt="" width="13" best-possible-match="TAAAGGGTCCATT"/>
+<motif name="MA0352.2.PDR1" alt="" width="14" best-possible-match="CTTTCCACGGAAAA"/>
+<motif name="MA0359.2.RAP1" alt="" width="15" best-possible-match="GATGTATGGGTGTAT"/>
+<motif name="MA0363.2.REB1" alt="" width="15" best-possible-match="TTTATTACCCGGATT"/>
+<motif name="MA0382.2.SKO1" alt="" width="17" best-possible-match="TTCAATGACGTAATTGA"/>
+<motif name="MA0403.2.TBF1" alt="" width="16" best-possible-match="TATTAACCCTAAATTT"/>
+<motif name="MA0412.2.UME6" alt="" width="15" best-possible-match="AATTAGCCGCCGAGG"/>
+<motif name="MA0329.2.MBP1" alt="" width="5" best-possible-match="ACGCG"/>
+<motif name="MA0333.2.MET31" alt="" width="6" best-possible-match="GTGGCG"/>
+<motif name="MA0334.2.MET32" alt="" width="6" best-possible-match="GCCACA"/>
+<motif name="MA0336.2.MGA1" alt="" width="9" best-possible-match="ATAGAACAC"/>
+<motif name="MA0337.2.MIG1" alt="" width="6" best-possible-match="CCCCGC"/>
+<motif name="MA0338.2.MIG2" alt="" width="6" best-possible-match="CCCCGC"/>
+<motif name="MA0339.2.MIG3" alt="" width="6" best-possible-match="CCCCGC"/>
+<motif name="MA0343.2.NDT80" alt="" width="9" best-possible-match="GCCACAAAA"/>
+<motif name="MA0347.3.NRG1" alt="" width="8" best-possible-match="AAGGGTCC"/>
+<motif name="MA0348.2.OAF1" alt="" width="8" best-possible-match="CGGAGATA"/>
+<motif name="MA0349.2.OPI1" alt="" width="5" best-possible-match="GAACC"/>
+<motif name="MA0352.3.PDR1" alt="" width="10" best-possible-match="TTCCACGGAA"/>
+<motif name="MA0354.2.PDR8" alt="" width="7" best-possible-match="CGGAGAT"/>
+<motif name="MA0355.2.PHD1" alt="" width="6" best-possible-match="CCTGCA"/>
+<motif name="MA0358.2.PUT3" alt="" width="6" best-possible-match="CCCGGG"/>
+<motif name="MA0359.3.RAP1" alt="" width="12" best-possible-match="ATGTATGGGTGT"/>
+<motif name="MA0360.2.RDR1" alt="" width="7" best-possible-match="TGCGGAA"/>
+<motif name="MA0361.2.RDS1" alt="" width="6" best-possible-match="CGGCCG"/>
+<motif name="MA0362.2.RDS2" alt="" width="6" best-possible-match="TCGGGG"/>
+<motif name="MA0363.3.REB1" alt="" width="9" best-possible-match="ATTACCCGG"/>
+<motif name="MA0365.2.RFX1" alt="" width="7" best-possible-match="GTTGCTA"/>
+<motif name="MA0367.2.RGT1" alt="" width="8" best-possible-match="TTTTTCCG"/>
+<motif name="MA0369.2.RLM1" alt="" width="14" best-possible-match="TTCTATAAATAGAT"/>
+<motif name="MA0372.2.RPH1" alt="" width="7" best-possible-match="CCCCTAA"/>
+<motif name="MA0374.2.RSC3" alt="" width="5" best-possible-match="CGCGC"/>
+<motif name="MA0375.2.RSC30" alt="" width="7" best-possible-match="GCGCGCG"/>
+<motif name="MA0376.2.RTG3" alt="" width="8" best-possible-match="GCACGTGC"/>
+<motif name="MA0377.2.SFL1" alt="" width="10" best-possible-match="ATAGAAGAAA"/>
+<motif name="MA0378.2.SFP1" alt="" width="10" best-possible-match="AAAAAATTTT"/>
+<motif name="MA0380.2.SIP4" alt="" width="6" best-possible-match="TCCGGA"/>
+<motif name="MA0381.2.SKN7" alt="" width="5" best-possible-match="GGCCA"/>
+<motif name="MA0382.3.SKO1" alt="" width="10" best-possible-match="ATGACGTAAT"/>
+<motif name="MA0384.2.SNT2" alt="" width="10" best-possible-match="TGGTAGCGCC"/>
+<motif name="MA0385.2.SOK2" alt="" width="6" best-possible-match="CTGCAG"/>
+<motif name="MA0386.2.SPT15" alt="" width="11" best-possible-match="GATATATATAT"/>
+<motif name="MA0389.2.SRD1" alt="" width="6" best-possible-match="AGATCT"/>
+<motif name="MA0390.2.STB3" alt="" width="11" best-possible-match="AATTTTTCACT"/>
+<motif name="MA0395.2.STP2" alt="" width="9" best-possible-match="GGCGCCGCA"/>
+<motif name="MA0396.2.STP3" alt="" width="6" best-possible-match="TAGCGC"/>
+<motif name="MA0397.2.STP4" alt="" width="6" best-possible-match="TAGCGC"/>
+<motif name="MA0398.2.SUM1" alt="" width="8" best-possible-match="AAATTTTT"/>
+<motif name="MA0400.2.SUT2" alt="" width="10" best-possible-match="AAACTCCGAA"/>
+<motif name="MA0402.2.SWI5" alt="" width="7" best-possible-match="TGCTGGT"/>
+<motif name="MA0403.3.TBF1" alt="" width="8" best-possible-match="AACCCTAA"/>
+<motif name="MA0406.2.TEC1" alt="" width="7" best-possible-match="ACATTCC"/>
+<motif name="MA0350.2.TOD6" alt="" width="10" best-possible-match="AGCTCATCGC"/>
+<motif name="MA0265.3.ABF1" alt="" width="14" best-possible-match="TCGTATATAGTGAT"/>
+<motif name="MA0408.2.TOS8" alt="" width="6" best-possible-match="TGTCAA"/>
+<motif name="MA0410.2.UGA3" alt="" width="7" best-possible-match="GGCGGGA"/>
+<motif name="MA0412.3.UME6" alt="" width="12" best-possible-match="ATTAGCCGCCGA"/>
+<motif name="MA0411.2.UPC2" alt="" width="6" best-possible-match="ATACGA"/>
+<motif name="MA0413.2.USV1" alt="" width="10" best-possible-match="TCCCCCTGAA"/>
+<motif name="MA0414.2.XBP1" alt="" width="6" best-possible-match="CTCGAG"/>
+<motif name="MA0415.2.YAP1" alt="" width="10" best-possible-match="CTTACGTAAG"/>
+<motif name="MA0266.2.ABF2" alt="" width="6" best-possible-match="TCTAGA"/>
+<motif name="MA0272.2.ARG81" alt="" width="7" best-possible-match="TGACTCT"/>
+<motif name="MA0273.2.ARO80" alt="" width="8" best-possible-match="CTCGGCAA"/>
+<motif name="MA0267.2.ACE2" alt="" width="5" best-possible-match="CCAGC"/>
+<motif name="MA0278.2.BAS1" alt="" width="12" best-possible-match="AGCCAGAGTCAA"/>
+<motif name="MA0279.3.CAD1" alt="" width="11" best-possible-match="TGCTTACTAAT"/>
+<motif name="MA0280.2.CAT8" alt="" width="5" best-possible-match="CCGGA"/>
+<motif name="MA0281.3.CBF1" alt="" width="10" best-possible-match="ATCACGTGAC"/>
+<motif name="MA0282.2.CEP3" alt="" width="7" best-possible-match="CTCGGAA"/>
+<motif name="MA0284.3.CIN5" alt="" width="10" best-possible-match="ATTACATAAT"/>
+<motif name="MA0285.2.CRZ1" alt="" width="6" best-possible-match="AGCCAC"/>
+<motif name="MA0286.2.CST6" alt="" width="6" best-possible-match="TGACGT"/>
+<motif name="MA0351.2.DOT6" alt="" width="10" best-possible-match="ACCTCATCGC"/>
+<motif name="MA0292.2.ECM22" alt="" width="6" best-possible-match="TCCGGA"/>
+<motif name="MA0293.2.ECM23" alt="" width="5" best-possible-match="AGATC"/>
+<motif name="MA0294.2.EDS1" alt="" width="7" best-possible-match="GGAAAAA"/>
+<motif name="MA0295.2.FHL1" alt="" width="6" best-possible-match="GACGCA"/>
+<motif name="MA0296.2.FKH1" alt="" width="13" best-possible-match="AATTGTAAACAAA"/>
+<motif name="MA0268.2.ADR1" alt="" width="6" best-possible-match="CCCCAC"/>
+<motif name="MA0300.2.GAT1" alt="" width="6" best-possible-match="GATAAG"/>
+<motif name="MA0301.2.GAT3" alt="" width="6" best-possible-match="AGATCT"/>
+<motif name="MA0302.2.GAT4" alt="" width="6" best-possible-match="AGATCT"/>
+<motif name="MA0303.3.GCN4" alt="" width="8" best-possible-match="TGACTCAT"/>
+<motif name="MA0305.2.GCR2" alt="" width="6" best-possible-match="GCTTCC"/>
+<motif name="MA0306.2.GIS1" alt="" width="6" best-possible-match="CCCCTA"/>
+<motif name="MA0308.2.GSM1" alt="" width="10" best-possible-match="AAACTCCGGA"/>
+<motif name="MA0309.2.GZF3" alt="" width="7" best-possible-match="TGATAAG"/>
+<motif name="MA0269.2.AFT1" alt="" width="10" best-possible-match="TATTGCACCC"/>
+<motif name="MA0310.2.HAC1" alt="" width="7" best-possible-match="GACACGT"/>
+<motif name="MA0312.3.HAP1" alt="" width="8" best-possible-match="CCGATAAA"/>
+<motif name="MA0314.3.HAP3" alt="" width="9" best-possible-match="TGATTGGCT"/>
+<motif name="MA0316.2.HAP5" alt="" width="14" best-possible-match="GGGATCTGATTGGT"/>
+<motif name="MA0317.2.HCM1" alt="" width="7" best-possible-match="TAAACAA"/>
+<motif name="MA0270.2.AFT2" alt="" width="6" best-possible-match="ACACCC"/>
+<motif name="MA0319.2.HSF1" alt="" width="7" best-possible-match="ATGGAAC"/>
+<motif name="MA0325.2.LYS14" alt="" width="7" best-possible-match="CGGAATT"/>
+<motif name="MA0417.1.YAP5" alt="" width="6" best-possible-match="AAGCAT"/>
+<motif name="MA0418.1.YAP6" alt="" width="20" best-possible-match="GGTCTGATTACGTAAGCGAC"/>
+<motif name="MA0419.1.YAP7" alt="" width="11" best-possible-match="ATTAGTAAGCA"/>
+<motif name="MA0420.1.ERT1" alt="" width="8" best-possible-match="ACCGGAAC"/>
+<motif name="MA0421.1.NSI1" alt="" width="10" best-possible-match="TTTACCCGGC"/>
+<motif name="MA0422.1.URC2" alt="" width="10" best-possible-match="CCGGAGATAA"/>
+<motif name="MA0423.1.YER130C" alt="" width="9" best-possible-match="ACCCCTATT"/>
+<motif name="MA0424.1.YER184C" alt="" width="8" best-possible-match="CTCCGGAA"/>
+<motif name="MA0425.1.YGR067C" alt="" width="14" best-possible-match="ACCCCACTTTTTTA"/>
+<motif name="MA0426.1.YHP1" alt="" width="6" best-possible-match="TAATTG"/>
+<motif name="MA0428.1.YKL222C" alt="" width="9" best-possible-match="AACGGAAAT"/>
+<motif name="MA0429.1.YLL054C" alt="" width="7" best-possible-match="CGGCCGA"/>
+<motif name="MA0430.1.YLR278C" alt="" width="8" best-possible-match="CCGGAGTT"/>
+<motif name="MA0431.1.TDA9" alt="" width="9" best-possible-match="ACCCCGCAC"/>
+<motif name="MA0432.1.YNR063W" alt="" width="8" best-possible-match="TCGGAGAT"/>
+<motif name="MA0433.1.YOX1" alt="" width="8" best-possible-match="TTAATTAA"/>
+<motif name="MA0434.1.YPR013C" alt="" width="9" best-possible-match="TGTAGATCA"/>
+<motif name="MA0435.1.YPR015C" alt="" width="20" best-possible-match="TGAAGACGTAAATCCTTACA"/>
+<motif name="MA0436.1.YPR022C" alt="" width="7" best-possible-match="CCCCACG"/>
+<motif name="MA0437.1.YPR196W" alt="" width="9" best-possible-match="ATTTCTCCG"/>
+<motif name="MA0438.1.YRM1" alt="" width="8" best-possible-match="ACGGAAAT"/>
+<motif name="MA0439.1.YRR1" alt="" width="11" best-possible-match="CTTATCTCCGC"/>
+<motif name="MA0440.1.ZAP1" alt="" width="15" best-possible-match="ACCTTAAAGGTCATG"/>
+<motif name="MA0441.1.ZMS1" alt="" width="9" best-possible-match="TTCCCCGCA"/>
+<motif name="MA0431.2.TDA9" alt="" width="7" best-possible-match="CCCCGCA"/>
+<motif name="MA0422.2.URC2" alt="" width="8" best-possible-match="CGGAGATA"/>
+<motif name="MA0416.2.YAP3" alt="" width="7" best-possible-match="ATTACGT"/>
+<motif name="MA0418.2.YAP6" alt="" width="10" best-possible-match="GATTACGTAA"/>
+<motif name="MA0423.2.YER130C" alt="" width="7" best-possible-match="CCCCTAT"/>
+<motif name="MA0424.2.YER184C" alt="" width="6" best-possible-match="TCCGGA"/>
+<motif name="MA0425.2.YGR067C" alt="" width="6" best-possible-match="CCCCAC"/>
+<motif name="MA0428.2.YKL222C" alt="" width="8" best-possible-match="ACGGAAAT"/>
+<motif name="MA0430.2.YLR278C" alt="" width="7" best-possible-match="CGGAGTT"/>
+<motif name="MA0433.2.YOX1" alt="" width="7" best-possible-match="TTAATTA"/>
+<motif name="MA0434.2.YPR013C" alt="" width="7" best-possible-match="GTAGATC"/>
+<motif name="MA0435.2.YPR015C" alt="" width="11" best-possible-match="ACGTAAATCCT"/>
+<motif name="MA0436.2.YPR022C" alt="" width="6" best-possible-match="CCCCAC"/>
+<motif name="MA0438.2.YRM1" alt="" width="7" best-possible-match="CGGAAAT"/>
+<motif name="MA0439.2.YRR1" alt="" width="10" best-possible-match="TTATCTCCGC"/>
+<motif name="MA0441.2.ZMS1" alt="" width="7" best-possible-match="CCCCGCA"/>
+<motif name="MA0420.2.ERT1" alt="" width="7" best-possible-match="CCGGAAC"/>
+<background source="--nrdb--">
+<value letter="A">0.275</value>
+<value letter="C">0.225</value>
+<value letter="G">0.225</value>
+<value letter="T">0.275</value>
+</background>
+<cisml-file>cisml.xml</cisml-file>
+</fimo>

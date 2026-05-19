@@ -1,0 +1,6 @@
+{
+  "peak_expression_transformation": {
+    "method": "log2(peak_expr+1)",
+    "description": "仅进行log2转换，未进行Min-Max归一化"
+  }
+}

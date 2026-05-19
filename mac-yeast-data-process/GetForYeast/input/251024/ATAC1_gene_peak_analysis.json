@@ -1,0 +1,119 @@
+{
+  "all": {
+    "version": "all",
+    "total_relations": 9241,
+    "unique_genes": 5536,
+    "unique_peaks": 3898,
+    "gene_to_peak_counts": {
+      "mean": 1.6679913294797688,
+      "median": 2.0,
+      "min": 1,
+      "max": 6,
+      "distribution": {
+        "1": 2644,
+        "2": 2188,
+        "3": 611,
+        "4": 85,
+        "5": 7,
+        "6": 1
+      }
+    },
+    "peak_to_gene_counts": {
+      "mean": 2.3689071318624935,
+      "median": 2.0,
+      "min": 1,
+      "max": 7,
+      "distribution": {
+        "2": 1408,
+        "3": 1046,
+        "1": 881,
+        "4": 435,
+        "5": 111,
+        "6": 15,
+        "7": 2
+      }
+    },
+    "peak_avg_gene_peaks": {
+      "mean": 1.9821727870214274,
+      "median": 2.0,
+      "min": 1.0,
+      "max": 6.0
+    }
+  },
+  "positive_strand": {
+    "version": "positive_strand",
+    "total_relations": 4629,
+    "unique_genes": 2770,
+    "unique_peaks": 3160,
+    "gene_to_peak_counts": {
+      "mean": 1.6693140794223826,
+      "median": 2.0,
+      "min": 1,
+      "max": 5,
+      "distribution": {
+        "1": 1304,
+        "2": 1128,
+        "3": 293,
+        "4": 40,
+        "5": 5
+      }
+    },
+    "peak_to_gene_counts": {
+      "mean": 1.4632911392405064,
+      "median": 1.0,
+      "min": 1,
+      "max": 4,
+      "distribution": {
+        "1": 1906,
+        "2": 1052,
+        "3": 194,
+        "4": 8
+      }
+    },
+    "peak_avg_gene_peaks": {
+      "mean": 1.9788238396624473,
+      "median": 2.0,
+      "min": 1.0,
+      "max": 5.0
+    }
+  },
+  "negative_strand": {
+    "version": "negative_strand",
+    "total_relations": 4612,
+    "unique_genes": 2766,
+    "unique_peaks": 3124,
+    "gene_to_peak_counts": {
+      "mean": 1.6666666666666667,
+      "median": 2.0,
+      "min": 1,
+      "max": 6,
+      "distribution": {
+        "1": 1340,
+        "2": 1060,
+        "3": 318,
+        "4": 45,
+        "5": 2,
+        "6": 1
+      }
+    },
+    "peak_to_gene_counts": {
+      "mean": 1.4756722151088348,
+      "median": 1.0,
+      "min": 1,
+      "max": 5,
+      "distribution": {
+        "1": 1867,
+        "2": 1043,
+        "3": 200,
+        "4": 13,
+        "5": 1
+      }
+    },
+    "peak_avg_gene_peaks": {
+      "mean": 2.00976845924029,
+      "median": 2.0,
+      "min": 1.0,
+      "max": 6.0
+    }
+  }
+}

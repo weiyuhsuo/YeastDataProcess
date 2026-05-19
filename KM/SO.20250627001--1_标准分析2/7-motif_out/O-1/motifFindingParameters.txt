@@ -1,0 +1,1 @@
+cmd = 5-macs2_out/O-1.dedup_summits.bed ASM185444v2 7-motif_out/O-1 -p 32

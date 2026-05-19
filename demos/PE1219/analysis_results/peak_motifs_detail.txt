@@ -1,0 +1,58 @@
+
+Peak 2312:
+  YGR067C              位置:  50- 64 链:  - p-value: 2.64e-05 q-value: 0.0523
+  PDR1                 位置:  21- 35 链:  - p-value: 3.86e-05 q-value: 0.0759
+  SIP4                 位置:  51- 58 链:  - p-value: 4.39e-05 q-value: 0.0450
+  ECM22                位置:  51- 58 链:  - p-value: 4.39e-05 q-value: 0.0450
+  MCM1                 位置:  44- 56 链:  - p-value: 4.40e-05 q-value: 0.0842
+  SFL1                 位置: 136-146 链:  - p-value: 5.72e-05 q-value: 0.0278
+  NDT80                位置:  70- 91 链:  - p-value: 5.73e-05 q-value: 0.0259
+  ASH1                 位置:  46- 56 链:  - p-value: 6.12e-05 q-value: 0.1240
+  YAP3                 位置: 100-108 链:  - p-value: 6.14e-05 q-value: 0.0390
+  PDR1                 位置:  23- 33 链:  - p-value: 6.15e-05 q-value: 0.1230
+  TDA9                 位置:  55- 64 链:  - p-value: 6.54e-05 q-value: 0.1330
+  YAP3                 位置: 101-108 链:  - p-value: 7.93e-05 q-value: 0.0522
+  YER184C              位置:  50- 58 链:  + p-value: 9.52e-05 q-value: 0.0647
+
+Peak 3254:
+  CIN5                 位置:  34- 48 链:  + p-value: 6.33e-07 q-value: 0.0011
+  CIN5                 位置:  36- 46 链:  + p-value: 9.35e-06 q-value: 0.0082
+  YAP6                 位置:  30- 50 链:  + p-value: 3.52e-05 q-value: 0.0546
+  CIN5                 位置:  37- 47 链:  + p-value: 3.56e-05 q-value: 0.0312
+  YAP6                 位置:  35- 45 链:  + p-value: 4.55e-05 q-value: 0.0442
+  SFL1                 位置: 136-146 链:  - p-value: 5.72e-05 q-value: 0.0278
+  NDT80                位置:  70- 91 链:  - p-value: 5.73e-05 q-value: 0.0259
+  YAP3                 位置: 100-108 链:  - p-value: 6.14e-05 q-value: 0.0390
+  YAP1                 位置:  31- 51 链:  - p-value: 6.44e-05 q-value: 0.1130
+  YAP3                 位置: 101-108 链:  - p-value: 7.93e-05 q-value: 0.0522
+
+Peak 3894:
+  CAD1                 位置: 127-138 链:  + p-value: 5.70e-05 q-value: 0.1030
+  NDT80                位置:  70- 91 链:  - p-value: 5.73e-05 q-value: 0.0259
+  CAD1                 位置: 125-141 链:  + p-value: 6.53e-05 q-value: 0.1100
+  SUM1                 位置: 132-141 链:  - p-value: 7.66e-05 q-value: 0.1160
+  STE12                位置: 109-116 链:  + p-value: 7.93e-05 q-value: 0.1550
+  MGA1                 位置:  18- 27 链:  - p-value: 8.71e-05 q-value: 0.0574
+
+Peak 567:
+  SFL1                 位置: 136-146 链:  - p-value: 5.72e-05 q-value: 0.0278
+  NDT80                位置:  70- 91 链:  - p-value: 5.73e-05 q-value: 0.0259
+  YAP3                 位置: 100-108 链:  - p-value: 6.14e-05 q-value: 0.0390
+  YAP3                 位置: 101-108 链:  - p-value: 7.93e-05 q-value: 0.0522
+  MGA1                 位置:  18- 27 链:  - p-value: 8.71e-05 q-value: 0.0574
+
+Peak 747:
+  YER184C              位置:  64- 72 链:  + p-value: 1.21e-05 q-value: 0.0246
+  PDR8                 位置:  62- 70 链:  - p-value: 3.88e-05 q-value: 0.0789
+  SIP4                 位置:  64- 71 链:  + p-value: 4.39e-05 q-value: 0.0450
+  ECM22                位置:  64- 71 链:  + p-value: 4.39e-05 q-value: 0.0450
+  OAF1                 位置:  61- 70 链:  - p-value: 5.02e-05 q-value: 0.1020
+  YLR278C              位置:  62- 70 链:  - p-value: 5.08e-05 q-value: 0.1040
+  PDR8                 位置:  62- 69 链:  - p-value: 5.35e-05 q-value: 0.1100
+  SUT2                 位置:  56- 76 链:  + p-value: 5.35e-05 q-value: 0.1020
+  SFL1                 位置: 136-146 链:  - p-value: 5.72e-05 q-value: 0.0278
+  YNR063W              位置:  62- 70 链:  - p-value: 6.55e-05 q-value: 0.1320
+  RGT1                 位置:  67- 75 链:  - p-value: 7.15e-05 q-value: 0.1370
+  GSM1                 位置:  61- 71 链:  + p-value: 7.38e-05 q-value: 0.1490
+  OAF1                 位置:  61- 69 链:  - p-value: 7.76e-05 q-value: 0.1580
+  MGA1                 位置:  18- 27 链:  - p-value: 8.71e-05 q-value: 0.0574

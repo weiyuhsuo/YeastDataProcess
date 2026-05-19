@@ -1,0 +1,87 @@
+# Python / env
+.venv/
+venv/
+env/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Data & generated outputs (do not version)
+/data/
+**/data/
+**/output/
+**/outputs/
+**/ZarrFileOutput/
+**/NumpyFileOutput/
+**/past/
+**/mock_training_*/
+
+# FIMO / motif scan results
+**/fimo_out/
+**/fimo_out_*/
+**/fimo_out*/
+cisml.xml
+**/cisml.xml
+
+# Archives & reference dumps
+**/*.zip
+**/*.tar
+**/*.tar.gz
+**/*.gz
+**/*.gtf
+**/KMData/
+**/GCA_*/
+
+# Genomics & matrices (large)
+**/*.npz
+**/*.npy
+**/*.zarr
+**/*.csv
+**/*.tsv
+**/*.bed
+**/*.narrowPeak
+**/*.bedGraph
+**/*.bigWig
+**/*.bw
+**/*.fna
+**/*.fa
+**/*.fasta
+**/*.gbff
+**/*.gpff
+**/*.faa
+**/*.gff
+**/*.gff3
+**/*.meme
+
+# Models & checkpoints
+**/*.pth
+**/*.pt
+**/*.ckpt
+**/*.h5
+**/*.hdf5
+**/*.pkl
+**/*.pickle
+**/*.onnx
+
+# Plots & spreadsheets
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.pdf
+**/*.svg
+**/*.xlsx
+**/*.xls
+
+# Misc large artifacts
+**/*.sam
+**/*.bam
+**/*.bai
+**/*.vcf
+**/*.vcf.gz

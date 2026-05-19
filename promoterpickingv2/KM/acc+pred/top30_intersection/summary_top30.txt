@@ -1,0 +1,35 @@
+top30 交集统计（合并后）
+============================================================
+one_to_one_relations 总行数: 1790
+one_to_one_relations 唯一peak_id: 1474
+one_to_one_relations 唯一gene_name: 1790
+
+top peaks(accuracy) 总行数(pos+neg): 886
+top peaks(accuracy) 唯一peak_id: 751
+
+交集关系行数(按 peak+strand 匹配): 711
+交集唯一peak数: 654
+交集唯一gene数: 711
+
+交集基因(前20条，按peak数降序):
+gene_name,n_relations,n_unique_peaks,strands,relation_peak_ids,max_pearson,mean_pearson
+Kmarxianus_FIM1_100,1,1,+,C-1.dedup_peak_30,0.8846551620427386,0.7537723819974331
+Kmarxianus_FIM1_1004,1,1,+,C-1.dedup_peak_404,0.8230713846107679,0.8230713846107679
+Kmarxianus_FIM1_1005,1,1,+,C-1.dedup_peak_405,0.821909197935037,0.7354981740119759
+Kmarxianus_FIM1_1007,1,1,+,C-3.dedup_peak_428,0.8096909736872933,0.8096909736872933
+Kmarxianus_FIM1_1008,1,1,-,C-1.dedup_peak_406,0.930002687916046,0.930002687916046
+Kmarxianus_FIM1_1018,1,1,+,C-1.dedup_peak_417,0.937734869991924,0.7948347179900234
+Kmarxianus_FIM1_1019,1,1,-,C-3.dedup_peak_443,0.8073280971973739,0.8073280971973739
+Kmarxianus_FIM1_1024,1,1,+,C-1.dedup_peak_422,0.8566231760960258,0.8103831280754534
+Kmarxianus_FIM1_1031,1,1,+,C-1.dedup_peak_428,0.9060298404979106,0.9060298404979106
+Kmarxianus_FIM1_1040,1,1,-,C-1.dedup_peak_430,0.8070344451305879,0.8070344451305879
+Kmarxianus_FIM1_1071,1,1,-,C-3.dedup_peak_469,0.854859798635393,0.8413476679829195
+Kmarxianus_FIM1_1072,1,1,+,C-1.dedup_peak_441,0.8614250177356343,0.8588599374346315
+Kmarxianus_FIM1_1075,1,1,-,C-1.dedup_peak_443,0.8503534342061223,0.8503534342061223
+Kmarxianus_FIM1_1077,1,1,+,O-3.dedup_peak_431,0.8158656716858251,0.7656674703221695
+Kmarxianus_FIM1_1083,1,1,+,O-3.dedup_peak_438,0.8037561753221872,0.8037561753221872
+Kmarxianus_FIM1_1100,1,1,+,C-1.dedup_peak_453,0.8083602994041015,0.7452251153765499
+Kmarxianus_FIM1_1105,1,1,+,C-1.dedup_peak_458,0.9093369599143916,0.9093369599143916
+Kmarxianus_FIM1_1106,1,1,-,C-1.dedup_peak_460,0.804279410991548,0.7664503340789582
+Kmarxianus_FIM1_1112,1,1,+,O-2.dedup_peak_348,0.8442644707792802,0.808983716960261
+Kmarxianus_FIM1_1114,1,1,+,C-1.dedup_peak_464,0.8675525787949342,0.8675525787949342

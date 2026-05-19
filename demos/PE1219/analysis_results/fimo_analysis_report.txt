@@ -1,0 +1,155 @@
+================================================================================
+FIMO扫描结果分析报告
+================================================================================
+
+## 1. 基本信息
+总motif匹配数: 48
+分析的peak数量: 5
+检测到的motif类型数: 33
+
+## 2. 各Peak的Motif统计
+
+Peak 2312:
+  - 总motif匹配数: 13
+  - 唯一motif类型数: 11
+  - Motif列表: ASH1   , ECM22  , MCM1   , NDT80  , PDR1   , SFL1   , SIP4   , TDA9   , YAP3   , YER184C, YGR067C
+
+Peak 3254:
+  - 总motif匹配数: 10
+  - 唯一motif类型数: 6
+  - Motif列表: CIN5   , NDT80  , SFL1   , YAP1   , YAP3   , YAP6   
+
+Peak 3894:
+  - 总motif匹配数: 6
+  - 唯一motif类型数: 5
+  - Motif列表: CAD1   , MGA1   , NDT80  , STE12  , SUM1   
+
+Peak 567:
+  - 总motif匹配数: 5
+  - 唯一motif类型数: 4
+  - Motif列表: MGA1   , NDT80  , SFL1   , YAP3   
+
+Peak 747:
+  - 总motif匹配数: 14
+  - 唯一motif类型数: 12
+  - Motif列表: ECM22  , GSM1   , MGA1   , OAF1   , PDR8   , RGT1   , SFL1   , SIP4   , SUT2   , YER184C, YLR278C, YNR063W
+
+## 3. 所有Peak共有的Motif
+没有在所有peak中都出现的motif
+
+## 4. 各Peak特有的Motif
+
+Peak 2312 特有的motif (5个):
+  - ASH1   
+  - MCM1   
+  - PDR1   
+  - TDA9   
+  - YGR067C
+
+Peak 3254 特有的motif (3个):
+  - CIN5   
+  - YAP1   
+  - YAP6   
+
+Peak 3894 特有的motif (3个):
+  - CAD1   
+  - STE12  
+  - SUM1   
+
+Peak 567: 无特有motif
+
+Peak 747 特有的motif (7个):
+  - GSM1   
+  - OAF1   
+  - PDR8   
+  - RGT1   
+  - SUT2   
+  - YLR278C
+  - YNR063W
+
+## 5. 基于Peak 567的改造分析
+
+Peak 2312 (相对于567):
+  新增motif (8个): ASH1   , ECM22  , MCM1   , PDR1   , SIP4   , TDA9   , YER184C, YGR067C
+  丢失motif (1个): MGA1   
+  保留motif (3个): NDT80  , SFL1   , YAP3   
+
+Peak 3254 (相对于567):
+  新增motif (3个): CIN5   , YAP1   , YAP6   
+  丢失motif (1个): MGA1   
+  保留motif (3个): NDT80  , SFL1   , YAP3   
+
+Peak 3894 (相对于567):
+  新增motif (3个): CAD1   , STE12  , SUM1   
+  丢失motif (2个): SFL1   , YAP3   
+  保留motif (2个): MGA1   , NDT80  
+
+Peak 747 (相对于567):
+  新增motif (10个): ECM22  , GSM1   , OAF1   , PDR8   , RGT1   , SIP4   , SUT2   , YER184C, YLR278C, YNR063W
+  丢失motif (2个): NDT80  , YAP3   
+  保留motif (2个): MGA1   , SFL1   
+
+## 6. Motif位置分析（重要motif）
+
+YAP3   :
+  Peak 2312: 位置 100-108, 链方向: {' -': 2}, 出现次数: 2
+  Peak 3254: 位置 100-108, 链方向: {' -': 2}, 出现次数: 2
+  Peak 567: 位置 100-108, 链方向: {' -': 2}, 出现次数: 2
+
+SFL1   :
+  Peak 2312: 位置 136-146, 链方向: {' -': 1}, 出现次数: 1
+  Peak 3254: 位置 136-146, 链方向: {' -': 1}, 出现次数: 1
+  Peak 567: 位置 136-146, 链方向: {' -': 1}, 出现次数: 1
+  Peak 747: 位置 136-146, 链方向: {' -': 1}, 出现次数: 1
+
+NDT80  :
+  Peak 2312: 位置 70-91, 链方向: {' -': 1}, 出现次数: 1
+  Peak 3254: 位置 70-91, 链方向: {' -': 1}, 出现次数: 1
+  Peak 3894: 位置 70-91, 链方向: {' -': 1}, 出现次数: 1
+  Peak 567: 位置 70-91, 链方向: {' -': 1}, 出现次数: 1
+
+CIN5   :
+  Peak 3254: 位置 34-48, 链方向: {' +': 3}, 出现次数: 3
+
+MGA1   :
+  Peak 3894: 位置 18-27, 链方向: {' -': 1}, 出现次数: 1
+  Peak 567: 位置 18-27, 链方向: {' -': 1}, 出现次数: 1
+  Peak 747: 位置 18-27, 链方向: {' -': 1}, 出现次数: 1
+
+YER184C:
+  Peak 2312: 位置 50-58, 链方向: {' +': 1}, 出现次数: 1
+  Peak 747: 位置 64-72, 链方向: {' +': 1}, 出现次数: 1
+
+YAP6   :
+  Peak 3254: 位置 30-50, 链方向: {' +': 2}, 出现次数: 2
+
+PDR1   :
+  Peak 2312: 位置 21-35, 链方向: {' -': 2}, 出现次数: 2
+
+PDR8   :
+  Peak 747: 位置 62-70, 链方向: {' -': 2}, 出现次数: 2
+
+SIP4   :
+  Peak 2312: 位置 51-58, 链方向: {' -': 1}, 出现次数: 1
+  Peak 747: 位置 64-71, 链方向: {' +': 1}, 出现次数: 1
+
+## 7. Motif显著性分析（Top 10最显著motif）
+YER184C (Peak 747): p-value=1.21e-05, q-value=0.0246, signal=12.37
+YGR067C (Peak 2312): p-value=2.64e-05, q-value=0.0523, signal=11.94
+CIN5    (Peak 3254): p-value=3.56e-05, q-value=0.0312, signal=12.17
+SIP4    (Peak 747): p-value=4.39e-05, q-value=0.0450, signal=11.46
+ECM22   (Peak 747): p-value=4.39e-05, q-value=0.0450, signal=11.96
+SIP4    (Peak 2312): p-value=4.39e-05, q-value=0.0450, signal=11.46
+ECM22   (Peak 2312): p-value=4.39e-05, q-value=0.0450, signal=11.96
+MCM1    (Peak 2312): p-value=4.40e-05, q-value=0.0842, signal=11.76
+YAP6    (Peak 3254): p-value=4.55e-05, q-value=0.0442, signal=11.21
+YLR278C (Peak 747): p-value=5.08e-05, q-value=0.1040, signal=11.93
+
+## 8. 改造趋势分析
+所有改造peak共新增 21 种motif类型
+所有改造peak共丢失 4 种motif类型
+
+新增的motif类型: ASH1   , CAD1   , CIN5   , ECM22  , GSM1   , MCM1   , OAF1   , PDR1   , PDR8   , RGT1   , SIP4   , STE12  , SUM1   , SUT2   , TDA9   , YAP1   , YAP6   , YER184C, YGR067C, YLR278C, YNR063W
+丢失的motif类型: MGA1   , NDT80  , SFL1   , YAP3   
+
+================================================================================
