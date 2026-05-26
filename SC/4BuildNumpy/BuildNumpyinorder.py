@@ -39,31 +39,26 @@ warnings.filterwarnings('ignore')  # 抑制非关键警告
 #    用途：将不同的基因名称统一映射到标准的locus tag（如YAL001C）
 #    格式：制表符分隔，包含gene_id, symbol, locus_tag等列
 #    说明：用于统一表达矩阵和注释文件中的基因命名
-GENE_INFO_FILE = '/home/rhys/YeastDataProcess/4BuildNumpy/data/Saccharomyces_cerevisiae.gene_info'
+GENE_INFO_FILE = '/home/rhys/YeastDataProcess/SC/4BuildNumpy/data/Saccharomyces_cerevisiae.gene_info'
 
 # 2. TSS位置文件（TSS_BED_FILE）- 必需
 #    用途：获取基因的转录起始位点（TSS）位置，用于计算peak与基因的距离
-#    格式：BED格式，列：chr, start, end, gene_name, score, strand, thickStart, thickEnd
-#    说明：这是高质量的TSS数据，优先使用此文件的TSS位置
-TSS_BED_FILE = '/home/rhys/YeastDataProcess/4BuildNumpy/data/Sc_EPDnew_cleaned.bed'
+#    说明：现在使用已经标准化好的文件，脚本不再做额外名称清洗
+TSS_BED_FILE = '/home/rhys/YeastDataProcess/SC/4BuildNumpy/data/Sc_EPDnew_cleaned_standardized.bed'
 
 # 3. 备用注释文件（ANNOT_FILE）- 必需
 #    用途：当TSS文件中找不到某基因时，从此文件获取基因位置并回推TSS
-#    格式：refFlat格式（制表符分隔），包含chr, strand, txStart, txEnd, cdsStart, cdsEnd, gene_name等
-#    说明：使用CDS起点±93bp来近似TSS位置（SHIFT_BP参数控制偏移量）
-ANNOT_FILE = '/home/rhys/YeastDataProcess/4BuildNumpy/data/ncbiRefSeqCurated.txt'
+#    说明：现在使用已经标准化好的文件，基因名无需再做复杂映射
+ANNOT_FILE = '/home/rhys/YeastDataProcess/SC/4BuildNumpy/data/ncbiRefSeqCurated_standardized.txt'
 
 # 4. 表达矩阵文件（EXPR_FILE）- 必需
 #    用途：获取所有样本的基因表达值（用于分配到peaks）
-#    格式：CSV或Excel格式，第一列是基因ID（行索引），后续列是样本（列名以GSM开头）
-#    说明：表达值应该是TPM格式，脚本会进行log2(TPM+1)转换
-EXPR_FILE = '/home/rhys/YeastDataProcess/4BuildNumpy/135sample/135_matrix_260121.xlsx'
+#    说明：已经预先完成基因名标准化，直接读取即可
+EXPR_FILE = '/home/rhys/YeastDataProcess/SC/4BuildNumpy/data/sample/训练_第三批数据_表达矩阵.csv'
 
 # 5. 条件文件（COND_FILE）- 必需（如果要生成完整训练数据）
 #    用途：获取每个样本的实验条件（如温度、培养基、药物等），编码为数值特征
-#    格式：Excel格式（.xlsx），第一列或包含"GSM"的列是样本ID，其他列是实验条件
-#    说明：如果此文件不存在，脚本会跳过条件编码，只生成映射统计
-COND_FILE = '/home/rhys/YeastDataProcess/4BuildNumpy/135sample/135_sample_260121.xlsx'
+COND_FILE = '/home/rhys/YeastDataProcess/SC/4BuildNumpy/data/sample/训练_第三批数据_条件表.xlsx'
 
 # 6. Peak-Gene标签文件（LABELS_FILE）- 可选
 #    用途：提供peak与gene的关联标签（用于监督学习）
@@ -82,7 +77,7 @@ FIXED_MAPPING_FILE = '/home/rhys/YeastDataProcess/4BuildNumpy/data/sample/encodi
 
 # --- 输出目录配置 ---
 # 输出文件的根目录（脚本会自动在此目录下创建带时间戳的子文件夹）
-OUTPUT_BASE_DIR = '/home/rhys/YeastDataProcess/4BuildNumpy/output'
+OUTPUT_BASE_DIR = '/home/rhys/YeastDataProcess/SC/4BuildNumpy/output'
 
 # 生成带时间戳的输出目录（例如：output/run_20251208_133217）
 timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
@@ -112,8 +107,8 @@ log_file = os.path.join(OUTPUT_DIR, "build_numpy.log")
 #   3. 注释掉不需要的样本：在字典前添加 # 号
 MATRIX_SUMMIT_LIST = [
     {
-        "matrix": '/home/rhys/YeastDataProcess/4BuildNumpy/data/ATAC1_matrix.csv',
-        "summit": '/home/rhys/YeastDataProcess/4BuildNumpy/data/fine_s90_e100_peaks.narrowPeak'
+        "matrix": '/home/rhys/YeastDataProcess/SC/4BuildNumpy/data/ATAC1_matrix.csv',
+        "summit": '/home/rhys/YeastDataProcess/SC/4BuildNumpy/data/fine_s90_e100_peaks.narrowPeak'
     },
 ]
 
@@ -273,151 +268,49 @@ def print_encoding_mapping(preprocessor, cond_df, encoding_columns):
     return encoding_info
 
 def load_gene_mapping():
-    """加载基因映射信息"""
+    """加载基因映射信息。现在输入文件已标准化，直接使用原始基因ID即可。"""
     print("加载基因映射信息...")
-    mapping = {}
-    with open(GENE_INFO_FILE, 'r') as f:
-        for line in f:
-            if not line.startswith('#'):
-                break
-        for line in f:
-            fields = line.strip().split('\t')
-            if len(fields) < 4:
-                continue
-            symbol = fields[2].strip()
-            locus_tag = fields[3].strip()
-            synonyms = fields[4].strip() if len(fields) > 4 else '-'
-            if not locus_tag.startswith('Y'):
-                continue
-            mapping[locus_tag] = locus_tag
-            if symbol != '-':
-                mapping[symbol] = locus_tag
-            if synonyms != '-':
-                for syn in synonyms.split('|'):
-                    mapping[syn.strip()] = locus_tag
-    print(f"基因映射数量: {len(mapping)}")
-    return mapping
+    if os.path.exists(GENE_INFO_FILE):
+        print(f"检测到基因信息文件，但当前流程已标准化，跳过复杂名称映射: {GENE_INFO_FILE}")
+    else:
+        print(f"未找到基因信息文件，继续使用原始基因ID")
+    return {}
 
 def load_gene_positions(gene_mapping):
-    """从BED文件加载基因TSS位置信息，没有TSS时使用CDS起点作为备选，不在BED中的基因使用备用注释文件"""
-    print(f"从BED文件加载TSS位置: {TSS_BED_FILE}")
+    """从标准化后的注释文件加载基因TSS位置信息。"""
+    print(f"从标准化注释文件加载TSS位置: {TSS_BED_FILE}")
     gene_pos = []
-    mapped_count = 0
-    unmapped_count = 0
-    tss_count = 0
-    cds_fallback_count = 0
-    bed_genes = set()  # 记录BED文件中的基因
-    
-    # 首先从BED文件加载
+    seen_genes = set()
+
     with open(TSS_BED_FILE, 'r') as f:
         for line in f:
             fields = line.strip().split('\t')
             if len(fields) < 8:
                 continue
-            
+
             chrom = fields[0]
             start = int(fields[1])
             end = int(fields[2])
             gene_name = fields[3].strip()
             strand = fields[5]
-            # 以前使用第7/8列(thickStart/thickEnd)作为TSS，导致正链几乎恒定值、负链偏大。
-            # 这里改为更通用、与0-based坐标一致的取法：
-            #   正链：TSS = start
-            #   负链：TSS = end - 1  （单碱基坐标，0-based）
-            # 注：保留原列解析但不再使用 tss_col6/tss_col7。
-            try:
-                _thick_start = int(fields[6])
-                _thick_end = int(fields[7])
-            except Exception:
-                _thick_start = _thick_end = -1
-            
-            bed_genes.add(gene_name)
-            
-            # 标准化基因名
-            if gene_name in gene_mapping:
-                locus_tag = gene_mapping[gene_name]
-                mapped_count += 1
-            else:
-                locus_tag = gene_name
-                unmapped_count += 1
-            
-            # 根据链方向选择TSS（统一规则）：
-            if strand == '+':
-                tss = start
-                tss_count += 1
-            else:
-                tss = max(start, end - 1)
-                tss_count += 1
-            
+
+            if gene_name in seen_genes:
+                continue
+            seen_genes.add(gene_name)
+
+            tss = start if strand == '+' else max(start, end - 1)
             gene_pos.append({
-                'gene_name': locus_tag,
+                'gene_name': gene_name,
                 'chrom': chrom,
                 'strand': strand,
                 'start': start,
                 'end': end,
-                'tss': tss,  # TSS位置（+ 用 start；- 用 end-1）
-                'has_tss': True  # 使用统一规则后的TSS
+                'tss': tss,
+                'has_tss': True
             })
-    
-    print(f"BED文件总基因数: {len(gene_pos)}，其中标准化映射成功: {mapped_count}，未映射: {unmapped_count}")
-    print(f"TSS信息使用: {tss_count}个基因，CDS起点备选: {cds_fallback_count}个基因")
-    
-    # 然后从备用注释文件加载不在BED中的基因
-    print(f"从备用注释文件加载缺失基因: {ANNOT_FILE}")
-    annot_count = 0
-    
-    # 获取已映射的标准基因名集合
-    mapped_standard_genes = set([item['gene_name'] for item in gene_pos])
-    
-    with open(ANNOT_FILE, 'r') as f:
-        for line in f:
-            fields = line.strip().split('\t')
-            if len(fields) < 13:
-                continue
 
-            # refFlat-like 列索引：
-            # 0:bin,1:name,2:chrom,3:strand,4:txStart,5:txEnd,6:cdsStart,7:cdsEnd,...,12:name2
-            chrom = fields[2]
-            strand = fields[3]
-            try:
-                tx_start = int(fields[4])
-                tx_end = int(fields[5])
-                cds_start = int(fields[6])
-                cds_end = int(fields[7])
-            except Exception:
-                continue
-
-            gene_name = fields[12].strip()  # 第13列是基因名（name2）
-
-            # 检查这个基因是否可以通过映射得到，并且不在BED文件中
-            if gene_name in gene_mapping:
-                standard_gene = gene_mapping[gene_name]
-                if standard_gene not in mapped_standard_genes:  # 不在BED文件中
-                    # 方向感知的CDS起点（coding_start）
-                    if strand == '+':
-                        coding_start = cds_start
-                        # 回推一个典型 TSS 偏移（上游）
-                        tss = max(0, coding_start - SHIFT_BP)
-                    else:
-                        coding_start = cds_end - 1
-                        # 负链上游在基因组坐标增大的方向，向右偏移
-                        tss = coding_start + SHIFT_BP
-
-                    gene_pos.append({
-                        'gene_name': standard_gene,
-                        'chrom': chrom,
-                        'strand': strand,
-                        'start': tx_start,
-                        'end': tx_end,
-                        'tss': tss,  # 使用 coding_start ± SHIFT_BP 近似TSS
-                        'has_tss': False  # 标记为回退TSS
-                    })
-                    mapped_standard_genes.add(standard_gene)
-                    annot_count += 1
-    
-    print(f"从备用注释文件补充基因数: {annot_count}")
-    print(f"最终总基因数: {len(gene_pos)}")
-    
+    print(f"标准化BED基因数: {len(gene_pos)}")
+    print(f"TSS信息使用: {len(gene_pos)}个基因，CDS起点备选: 0个基因")
     gene_pos_df = pd.DataFrame(gene_pos)
     return gene_pos_df
 
@@ -452,30 +345,16 @@ def preprocess_expression_matrix(expr_data):
     return expr_data
 
 def load_expression_data(gene_mapping, expr_gsms):
-    """加载表达数据"""
+    """加载已经标准化好的表达数据。"""
     print("加载表达数据...")
     expr_data = read_expression_file(EXPR_FILE, index_col=0)
-    
-    # 确保列名都是字符串格式
+    expr_data.index = [str(gene).strip() for gene in expr_data.index]
     expr_data.columns = [str(col) for col in expr_data.columns]
-    
-    # 基因名标准化
-    new_index = []
-    for gene in expr_data.index:
-        gene_clean = str(gene).strip()
-        if gene_clean in gene_mapping:
-            new_index.append(gene_mapping[gene_clean])
-        else:
-            new_index.append(gene_clean)
-    expr_data.index = new_index
-    
-    # 只保留需要的GSM列（确保expr_gsms也是字符串格式）
+
     expr_gsms_str = [str(gsm) for gsm in expr_gsms]
     expr_data = expr_data[expr_gsms_str]
-    
-    # 进行基础预处理（不进行log转换和归一化）
     expr_data = preprocess_expression_matrix(expr_data)
-    
+
     print(f"表达数据形状: {expr_data.shape}")
     return expr_data
 
